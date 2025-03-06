@@ -363,8 +363,10 @@ section {
 /* Section Specific Styles */
 .text-container {
     position: relative;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 100%;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .about-text {
@@ -533,97 +535,210 @@ section {
     }
 }
 
-@media (max-width: 1024px) {
-    .swiper-container {
-        padding: 10px; /* Reduce padding on medium screens */
-    }
+/* Media Queries for Responsiveness */
 
-    .swiper-slide {
-        max-width: 100%; /* Reduce max-width for medium screens */
+/* Small Mobile (up to 480px) */
+@media screen and (max-width: 480px) {
+    /* Typography adjustments */
+    h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+        margin-bottom: 3vh;
     }
-}
-
-@media (max-width: 768px) {
-    .swiper-container {
-        padding: 10px; /* Adjust padding for smaller screens */
+    
+    .name-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+        animation: typing 1.5s steps(10);
     }
-
-    .swiper-slide {
-        max-width: 90%;
-        padding: 10px; /* Adjust slide padding for smaller screens */
+    
+    .description {
+        font-size: 14px;
+        letter-spacing: 0.5px;
     }
-}
-
-@media (max-width: 768px) {
-    .swiper-container {
-        padding: 10px; /* Adjust padding */
-    }
-
-    .swiper-slide {
-        max-width: 85%; /* Make the slide box take 85% of the screen on tablets */
-        padding: 10px; /* Adjust padding for tablet screens */
-    }
-}
-
-/* Section-specific adjustments for smaller screens */
-@media (max-width: 600px) {
+    
+    /* Layout adjustments */
     .main-content {
         flex-direction: column;
-        gap: 20px;  /* Reduce the gap between items */
+        gap: 20px;
+        padding: 0 15px;
     }
+    
     .profile-image {
-        max-width: 60%;  /* Adjust profile image size */
+        max-width: 80%;
+        margin: 0 auto;
     }
-    .text-content {
-        text-align: center;
-        width: 100%;
+    
+    /* Avatar and bubbles */
+    #avatar {
+        max-width: 250px;
     }
-    .name-title {
-        font-size: 3rem;  /* Smaller font size for mobile */
+    
+    /* Hide some decorative bubbles */
+    .bubble:nth-child(4),
+    .bubble:nth-child(5) {
+        display: none;
     }
-    .description {
-        font-size: 14px;  /* Smaller font size for mobile */
+    
+    /* Section adjustments */
+    section {
+        padding: 40px 15px;
     }
-}
-
-/* Adjust text content for very small screens */
-@media (max-width: 480px) {
-    .swiper-container {
-        padding: 5px; /* Reduce padding on small screens */
+    
+    .about-text {
+        padding: 20px;
+        border-radius: 30px;
     }
-
-    .swiper-slide {
-        max-width: 100%; /* Allow slide to take full width on extra small screens */
-        padding: 5px; /* Further reduce padding on mobile */
+    
+    .my-image, .anubis-image {
+        width: 120px;
+        height: 120px;
     }
-
-    .main-content {
-        padding: 0 10px;
-    }
-    .name-title {
-        font-size: 2rem;  /* Further decrease font size */
-    }
-    .description {
-        font-size: 12px;  /* Further decrease font size */
-    }
+    
+    /* Social icons */
     .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Animation adjustments - reduce movement */
+    @keyframes float {
+        0%, 100%{
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Medium Devices (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Typography adjustments */
+    h2 {
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+    
+    .name-title {
+        font-size: 3rem;
+    }
+    
+    /* Layout adjustments */
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .profile-image {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    
+    /* Section adjustments */
+    .about-text {
+        padding: 25px;
+        border-radius: 40px;
+    }
+    
+    /* Reduce size of waiting image */
+    #waiting {
+        height: 250px;
+    }
+}
+
+/* Tablets and Smaller Desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Layout adjustments */
+    .main-content {
+        gap: 4%;
+    }
+    
+    .profile-image {
+        max-width: 45%;
+    }
+}
+
+/* General responsive fixes for all smaller screens */
+@media screen and (max-width: 1024px) {
+    /* Improve scroll snap experience on smaller devices */
+    html {
+        scroll-snap-type: y proximity;
+    }
+    
+    /* Adjust animation for performance */
+    body, body.darkmode {
+        background-size: 300% 300%;
+        animation: gradientBG 15s ease infinite;
+    }
+    
+    /* Ensure text content is properly centered */
+    .text-content {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    /* Adjust swiper navigation for better touch experience */
+    .swiper-button-prev, 
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Fix for devices with height issues */
+@media screen and (max-height: 600px) {
+    section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    html {
+        scroll-snap-type: none;
+    }
+    
+    .main-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+    
+    html {
+        scroll-snap-type: none;
+    }
+    
+    .main-content {
         flex-direction: row;
-        justify-content: center;
+        gap: 5%;
     }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media screen and (max-width: 767px) {
-    body {
-        background: var(--lightBgColor) !important; /* Set a solid background color */
-        animation: none !important; /* Disable background animation */
+    
+    .profile-image {
+        max-width: 35%;
     }
-}
-
-/* Extra small devices (phones, less than 576px) */
-@media screen and (max-width: 575px) {
-    body {
-        background: var(--darkBgColor) !important; /* Override background to solid */
-        animation: none !important; /* Ensure animation is disabled */
+    
+    #avatar {
+        max-width: 200px;
+    }
+    
+    /* Reduce animation movement */
+    @keyframes float {
+        0%, 100%{
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
     }
 }

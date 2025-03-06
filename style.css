@@ -437,6 +437,9 @@ section {
     justify-content: center;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 /* Swiper navigation buttons */
@@ -533,282 +536,48 @@ section {
     }
 }
 
-/* Responsive Media Queries - Fixed for Avatar Size */
-
-/* Base styles stay the same for large screens */
-
-/* Medium devices (tablets, less than 992px) */
-@media screen and (max-width: 991px) {
-    html {
-        scroll-snap-type: none; /* Disable scroll snapping on smaller devices */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
     }
-    
-    section {
-        min-height: auto;
-        padding: 60px 20px;
-        scroll-snap-align: none;
-    }
-    
+}
+
+/* Section-specific adjustments for smaller screens */
+@media (max-width: 600px) {
     .main-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;  /* Reduce the gap between items */
     }
-    
     .profile-image {
-        max-width: 70%;
-        margin: 0 auto;
+        max-width: 60%;  /* Adjust profile image size */
     }
-    
-    /* Avatar kept original size for tablets */
-    #avatar {
-        max-width: 400px; /* Keep original max-width */
-    }
-    
-    .name-title {
-        font-size: 3rem;
-        white-space: normal;
-        animation: none;
-        border-right: none;
-    }
-    
-    h2 {
-        font-size: 32px;
-        white-space: normal;
-        animation: none;
-        border-right: none;
-    }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media screen and (max-width: 767px) {
-    section {
-        padding: 50px 15px;
-    }
-    
-    .name-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-    
-    h2 {
-        font-size: 26px;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    /* Only adjust avatar size on smaller phones */
-    #avatar {
-        max-width: 300px;
-    }
-    
-    .description {
-        font-size: 15px;
-        line-height: 1.4;
-    }
-    
-    /* Reduce or hide some bubble animations on mobile */
-    .bubble:nth-child(4), .bubble:nth-child(5) {
-        display: none;
-    }
-    
-    .bubble {
-        width: 8vh;
-        height: 8vh;
-    }
-    
-    .about-text {
-        padding: 25px 15px;
-        border-radius: 25px;
-    }
-}
-
-/* Extra small devices (phones, less than 576px) */
-@media screen and (max-width: 575px) {
-    body {
-        animation: gradientBG 20s ease infinite; /* Slow down the background animation */
-    }
-    
-    body.darkmode {
-        animation: gradientBG 25s ease infinite;
-    }
-    
-    section {
-        padding: 40px 12px;
-    }
-    
-    .profile-image {
-        max-width: 85%;
-    }
-    
-    #avatar {
-        max-width: 220px;
-        animation: float 5s ease-in-out infinite;
-    }
-    
-    .name-title {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-    
-    h2 {
-        font-size: 22px;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-    }
-    
-    .description {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-    
-    /* Simplify animations further */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-    
-    /* Adjust bubble sizes and positioning */
-    .bubble:nth-child(1) {top: 50px; left: 0px; width: 30px; height: 30px;}
-    .bubble:nth-child(2) {top: 20px; right: 0px; width: 40px; height: 40px;}
-    .bubble:nth-child(3) {bottom: 0px; left: 30px; width: 35px; height: 35px;}
-    
-    /* Social icons adjustments */
-    .social-icons {
-        gap: 10px;
-    }
-    
-    .social-icon {
-        width: 32px;
-        height: 32px;
-    }
-    
-    /* Button adjustment */
-    .contact-btn {
-        padding: 8px 18px;
-        font-size: 14px;
-    }
-    
-    /* About section images */
-    .my-image, .anubis-image {
-        width: 100px;
-        height: 100px;
-    }
-    
-    /* Swiper adjustments */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        width: 30px;
-        height: 30px;
-        transform: scale(0.8);
-    }
-    
-    /* Fix for theme switch button */
-    #theme-switch {
-        top: 10px;
-        right: 10px;
-        transform: scale(0.9);
-    }
-}
-
-/* Very small phones (iPhone SE, etc) */
-@media screen and (max-width: 375px) {
-    .name-title {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
-        font-size: 20px;
-    }
-    
-    #avatar {
-        max-width: 180px;
-    }
-    
-    .description {
-        font-size: 13px;
-    }
-    
-    .about-text {
-        padding: 20px 12px;
-        border-radius: 20px;
-    }
-    
-    .social-icon {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-/* Height-based adjustments */
-@media screen and (max-height: 700px) {
-    section {
-        padding: 30px 15px;
-    }
-    
-    .name-title {
-        margin-bottom: 10px;
-    }
-    
-    .description {
-        margin-bottom: 15px;
-    }
-    
-    /* Only adjust avatar on shorter screens when needed */
-    @media screen and (max-width: 767px) {
-        #avatar {
-            max-width: 160px;
-        }
-    }
-    
-    .social-icons {
-        margin-top: 10px;
-        margin-bottom: 15px;
-    }
-}
-
-/* Landscape mode on phones - critical fix */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    section {
-        padding: 20px 15px;
-        min-height: 450px;
-    }
-    
-    .main-content {
-        flex-direction: row;
-        gap: 20px;
-    }
-    
-    .profile-image {
-        max-width: 40%;
-    }
-    
     .text-content {
-        text-align: left;
+        text-align: center;
+        width: 100%;
     }
-    
-    .title-container {
-        justify-content: flex-start;
+    .name-title {
+        font-size: 3rem;  /* Smaller font size for mobile */
     }
-    
-    .icons-container {
-        justify-content: flex-start;
-    }
-    
-    #avatar {
-        max-width: 140px;
-    }
-    
-    .name-title, h2 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-    
     .description {
-        font-size: 13px;
-        margin-bottom: 10px;
+        font-size: 14px;  /* Smaller font size for mobile */
+    }
+}
+
+/* Adjust text content for very small screens */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 0 10px;
+    }
+    .name-title {
+        font-size: 2rem;  /* Further decrease font size */
+    }
+    .description {
+        font-size: 12px;  /* Further decrease font size */
+    }
+    .social-icons {
+        flex-direction: row;
+        justify-content: center;
     }
 }

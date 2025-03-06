@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debs - Portfolio</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/62becd6838.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+    </style> 
+    <link rel="shortcut icon" href="midia/favicon.ico" type="image/x-icon">
+    
+</head>
+<body class="darkmode">
+    <!-- Theme Switch Button -->
+    <button id="theme-switch">
+        <img src="midia/dark_mode.png" alt="dark_mode" height="30px">
+        <img src="midia/light_mode.png" alt="light_mode" height="30px">
+    </button>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">DE<br>BS</div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="main-content">
+            <div class="profile-image">
+                <div id="avatar-container">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <img id="avatar" src="midia/meu-avatar.png" alt="Avatar Illustration">
+                </div>
+            </div>
+            
+            <div class="text-content">
+                <div class="title-container">
+                    <h1 class="name-title">Hi, I'm Debs!</h1>
+                </div>
+                <p class="description">
+                    An curious mind, independent spirit and <span class="highlight">Full-stack developer & game enthusiast</span> from Brazil.<br> From pixel-perfect to powerful back-end logic, I love building things that work, feel, and play great. <br>
+                    Curious? <span class="highlight">Keep scrolling</span> — there's plenty more to explore! 🚀
+                </p>
+                <div class="icons-container">
+                    <div class="social-icons">
+                        <a href="https://github.com/deboraedithm" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/debora-edith/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="mailto:deboraedithm@gmail.com&subject=Hey!🤩%20I%20want%20contact%20you%20Debs!"><button class="contact-btn">CONTACT ME!</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="text-container swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="about-text swiper-slide" data-index="0">
+                    <img src="midia/eu.jpg" alt="My image" class="my-image">
+                    <p>Hello there! <br>
+                    <br>I'm a 26-year-old tech enthusiast from São Bernardo do Campo, <span class="highlight">fueled by my love for games, technology, and art </span>— oh, and of course, my <span class="highlight">feline overlord, Anubis. 🐈‍⬛💻🎮</span><br>
+                    <br>Right now, I'm diving deep into the world of Software Analysis and Development at <span class="highlight">FIAP</span>, while also sharpening my skills in both Front-end and Back-end development. <span class="highlight">My mission?</span> To build an awesome portfolio that not only showcases my projects but also reflects my passion for creativity and innovation.</p><br>
+                    <p>I'm always up for new challenges, whether it's coding something cool, geeking out over a new game, or just trying to get Anubis to respect my keyboard space. (Still a work in progress.) 😼✨</p>
+                </div>  
+        
+                <!-- Slide 2 -->
+                <div class="about-text swiper-slide" data-index="1">
+                    <audio id="meow1" src="midia/meow-1.mp3"></audio>
+                    <img src="midia/anubis-neutral.png" alt="Anubis" class="anubis-image hover-sound" data-sound="meow1">
+
+                    <p>Ever since I was around six, playing video games with my dad and technology has been a huge part of my life. I never really stopped (<span class="highlight">except for those unavoidable pauses that adulthood brings</span>).</p> <br>
+                    <p>In school, I was the type of person who had no clue about what I wanted to study. I remember feeling like I was floating through subjects, trying to find something that truly sparked my interest. Then came <span class="highlight">psychology</span>! <br> As soon as I discovered it, I was hooked. I found myself binge-reading books about the human mind, analyzing everyone around me (<span class="highlight">don't worry, I wasn't that creepy!</span>), and diving deep into what made people tick. College was a blast, and studying psychology not only fascinated me but also shaped how I view the world and understand others. It was like everything suddenly clicked. After graduating, I stepped into HR, which I've enjoyed, but it never quite sparked the passion I was looking for.</p><br>
+                    <p>Now, I'm diving deep into <span class="highlight">Front-end and Back-end development</span>. Technology, software, and creating things are what truly drive me. I'm excited about learning, growing, and, most importantly, using tech to make people's lives better. It feels like I'm finally on the right path, blending my love for tech with my desire to help others. It's an adventure I can't wait to fully embrace!</p>
+                </div>
+        
+                <!-- Slide 3 -->
+                <div class="about-text swiper-slide" data-index="2">
+                    <audio id="meow2" src="midia/cat-meow-mp3.mp3"></audio>
+                    <img src="midia/anubis-happy.png" alt="Anubis" class="anubis-image hover-sound" data-sound="meow2">
+                    
+                    <p>I'm looking forward to <span class="highlight">working on new projects</span> and constantly learning new things!</p> <br>
+                    <p>The journey <span class="highlight">never stops</span>, and I'm more excited than ever to dive into fresh challenges and innovations. Feel free to check out what I'm developing — I'm always up to something new! 🚀</p>
+                </div>
+            </div>
+            <!-- Added navigation controls to About section -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="text-container swiper">
+            <div class="swiper-wrapper">
+                <div class="about-text swiper-slide" data-index="0">
+                    <p>Coming soon...</p><br>
+                    <br><img id="waiting" src="midia/waiting.png" alt="Dark Sith waiting">
+                </div>
+            </div>
+            <!-- Added navigation controls to Projects section -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <h3>From understanding people to understanding code — bridging psychology, HR, and tech!</h3> <br>
+        <div class="text-container swiper">
+            <div class="swiper-wrapper">
+                <div class="about-text swiper-slide" data-index="0">
+                    <p>With a degree in psychology and four years in HR, I've mastered the art of <span class="highlight">problem-solving, communication, and user experience</span>. Whether it's people or software, everything comes down to understanding behavior — because great technology <span class="highlight">isn't just about code; it's about how humans interact with it.</span></p><br> <p>Now, I'm on a mission to become a coding <span class="highlight">superhero</span> — though, unfortunately, I wasn't bitten by a radioactive computer (yet). But with every project, I'm leveling up my skills, turning coffee into code, and debugging my way to greatness. 💻</p> <br>
+                    <br> <img src="midia/hero.png" alt="hero" class="my-image">
+                </div>
+                <div class="about-text swiper-slide" data-index="1">
+                    <p>Now, I'm channeling that knowledge into the digital world, mastering HTML, CSS, JavaScript, and C# to build seamless, user-friendly experiences.</p>
+                    <br><p>I thrive on <span class="highlight">solving problems through code</span>, crafting solutions that aren't just visually striking but genuinely make life easier.</p><br>
+                    <p><span class="highlight">Tech is my next big step</span>, and every line of code is a new opportunity to create, innovate, and push boundaries!</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>Got an awesome idea? Want to build something cool? Or just geek out about tech and games?</p><br><br>
+        <p><span class="highlight">Let's connect! 🚀</span> Drop me a message, and let's make some magic happen — one line of code at a time.</p>
+    </section>
+
+    <!-- Scripts Section -->
+    <script src="script.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

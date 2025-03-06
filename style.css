@@ -911,3 +911,201 @@ section {
         padding-bottom: 20px;
     }
 }
+
+/* Mobile Specific Fixes */
+
+/* Fix height-related issues */
+@media screen and (max-width: 480px) {
+    html {
+        height: -webkit-fill-available;
+    }
+    
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    
+    section {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        height: auto;
+        overflow: visible;
+        scroll-snap-align: start;
+        padding: 40px 15px;
+        width: 100vw;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Fix overflow issues */
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        margin: 0;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    
+    /* Improve text display */
+    .name-title {
+        font-size: 2rem;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: fade-up 0.5s;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Fix avatar container */
+    #avatar-container {
+        width: 100%;
+        max-width: 160px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    #avatar {
+        width: 100%;
+        max-width: 160px;
+        height: auto;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    /* Reduce animation complexity for performance */
+    .bubble {
+        width: 5vh;
+        height: 5vh;
+    }
+    
+    .bubble:nth-child(3),
+    .bubble:nth-child(4),
+    .bubble:nth-child(5) {
+        display: none;
+    }
+    
+    /* Fix text-container */
+    .text-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    .about-text {
+        width: 100%;
+        border-radius: 20px;
+        padding: 20px 15px;
+    }
+}
+
+/* Small to Medium Mobile Devices (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    html {
+        height: -webkit-fill-available;
+    }
+    
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    
+    section {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        height: auto;
+        overflow: visible;
+        padding: 40px 20px;
+        width: 100vw;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Fix scrolling */
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Fix content containers */
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        flex-direction: column;
+    }
+    
+    /* Improve text display */
+    .name-title {
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: fade-up 0.5s;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Fix for all mobile devices */
+@media screen and (max-width: 768px) {
+    /* Disable gradient animation for performance */
+    body, body.darkmode {
+        background-size: 300% 300%;
+        animation: none;
+        background-attachment: fixed;
+    }
+    
+    /* Fix scrolling issues */
+    html {
+        scroll-snap-type: y proximity; /* Change to proximity for better mobile experience */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Fix font sizing */
+    h2 {
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: fade-up 0.5s;
+    }
+    
+    /* Fix about text */
+    .about-text {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Simplify animations */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Fix for landscape orientation on mobile */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    section {
+        min-height: 120vh;
+        padding: 20px;
+    }
+    
+    .main-content {
+        padding: 10px 0;
+    }
+    
+    /* Disable complex animations */
+    #avatar {
+        animation: none;
+    }
+    
+    .bubble {
+        display: none;
+    }
+}

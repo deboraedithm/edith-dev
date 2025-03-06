@@ -532,3 +532,174 @@ section {
         transform: translateY(-10px) translateX(-50%);
     }
 }
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+    /* Typography adjustments */
+    .name-title {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+        margin-bottom: 3vh;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    /* Layout adjustments */
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .profile-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    /* Avatar adjustments */
+    #avatar {
+        max-width: 280px;
+    }
+    
+    /* Social icons */
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* About section */
+    .about-text {
+        padding: 25px;
+        border-radius: 30px;
+    }
+    
+    .my-image, .anubis-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Swiper navigation */
+    .swiper-button-prev, 
+    .swiper-button-next {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Typography adjustments for very small screens */
+    .name-title {
+        font-size: 2rem;
+        animation: typing 1.5s steps(13), blink 0.5s step-end infinite alternate;
+    }
+    
+    h2 {
+        font-size: 24px;
+        letter-spacing: 3px;
+        margin-bottom: 2vh;
+    }
+    
+    /* Layout adjustments */
+    section {
+        padding: 40px 10px;
+    }
+    
+    /* Avatar adjustments */
+    #avatar {
+        max-width: 220px;
+    }
+    
+    .bubble {
+        width: 8vh;
+        height: 8vh;
+    }
+    
+    /* Bubbles position adjustment */
+    .bubble:nth-child(1) {top: 70px; left: -5px;}
+    .bubble:nth-child(2) {top: 20px; right: 5px;}
+    
+    /* Button adjustments */
+    .contact-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    /* About section */
+    .about-text {
+        padding: 20px;
+        border-radius: 25px;
+    }
+    
+    .my-image, .anubis-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Theme switch button */
+    #theme-switch {
+        top: 10px;
+        right: 10px;
+    }
+    
+    /* Swiper adjustments */
+    .swiper-button-prev, 
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Fix for very small height screens */
+@media screen and (max-height: 600px) {
+    section {
+        padding: 20px 10px;
+        min-height: 600px; /* Ensure minimum height for content */
+    }
+    
+    h2 {
+        margin-bottom: 15px;
+    }
+    
+    .main-content {
+        gap: 20px;
+    }
+    
+    #avatar {
+        max-width: 180px;
+    }
+    
+    .social-icons {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Landscape orientation on small devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .main-content {
+        flex-direction: row;
+    }
+    
+    .profile-image {
+        max-width: 30%;
+    }
+    
+    #avatar {
+        max-width: 150px;
+    }
+    
+    section {
+        min-height: 500px;
+    }
+}

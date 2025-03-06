@@ -67,6 +67,18 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 1,
         spaceBetween: 10,
         speed: 900,
+
+        breakpoints: {
+            640: {
+                slidesPerView: 1, 
+            },
+            768: {
+                slidesPerView: 1, 
+            },
+            1024: {
+                slidesPerView: 1,
+            },
+        },
         
         pagination: {
             el: '.swiper-pagination',

@@ -437,9 +437,6 @@ section {
     justify-content: center;
     width: 100%;
     padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    word-wrap: break-word;
 }
 
 /* Swiper navigation buttons */
@@ -536,11 +533,35 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .swiper-container {
+        padding: 10px; /* Reduce padding on medium screens */
+    }
+
     .swiper-slide {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
+        max-width: 100%; /* Reduce max-width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .swiper-slide {
+        max-width: 90%;
+        padding: 10px; /* Adjust slide padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-container {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .swiper-slide {
+        max-width: 85%; /* Make the slide box take 85% of the screen on tablets */
+        padding: 10px; /* Adjust padding for tablet screens */
     }
 }
 
@@ -567,6 +588,15 @@ section {
 
 /* Adjust text content for very small screens */
 @media (max-width: 480px) {
+    .swiper-container {
+        padding: 5px; /* Reduce padding on small screens */
+    }
+
+    .swiper-slide {
+        max-width: 100%; /* Allow slide to take full width on extra small screens */
+        padding: 5px; /* Further reduce padding on mobile */
+    }
+
     .main-content {
         padding: 0 10px;
     }
@@ -579,5 +609,21 @@ section {
     .social-icons {
         flex-direction: row;
         justify-content: center;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 767px) {
+    body {
+        background: var(--lightBgColor) !important; /* Set a solid background color */
+        animation: none !important; /* Disable background animation */
+    }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media screen and (max-width: 575px) {
+    body {
+        background: var(--darkBgColor) !important; /* Override background to solid */
+        animation: none !important; /* Ensure animation is disabled */
     }
 }

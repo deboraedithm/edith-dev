@@ -535,9 +535,7 @@ section {
     }
 }
 
-/* Media Queries for Responsiveness */
-
-/* Small Mobile (up to 480px) */
+/* Extra Small Mobile (up to 480px) */
 @media screen and (max-width: 480px) {
     /* Typography adjustments */
     h2 {
@@ -547,31 +545,73 @@ section {
     }
     
     .name-title {
-        font-size: 2.5rem;
-        letter-spacing: 3px;
-        animation: typing 1.5s steps(10);
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        text-align: center;
+        width: 100%;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: fade-up 0.5s;
+        margin: 0 auto 15px auto;
     }
     
     .description {
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 0.5px;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto 15px auto;
     }
     
     /* Layout adjustments */
     .main-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
         gap: 20px;
-        padding: 0 15px;
     }
     
     .profile-image {
-        max-width: 80%;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .text-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         margin: 0 auto;
     }
     
     /* Avatar and bubbles */
+    #avatar-container {
+        width: 80%;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    
     #avatar {
-        max-width: 250px;
+        width: 100%;
+        max-width: 160px;
+        height: auto;
     }
     
     /* Hide some decorative bubbles */
@@ -582,11 +622,14 @@ section {
     
     /* Section adjustments */
     section {
-        padding: 40px 15px;
+        padding: 15px 10px;
     }
     
     .about-text {
-        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 15px 10px;
+        margin: 0 auto;
         border-radius: 30px;
     }
     
@@ -601,8 +644,24 @@ section {
     }
     
     .social-icon {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Fix button size */
+    .contact-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    /* Text in about section */
+    .about-text p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     /* Animation adjustments - reduce movement */
@@ -614,9 +673,23 @@ section {
             transform: translateY(-10px);
         }
     }
+    
+    /* Swiper controls */
+    .swiper-button-prev, 
+    .swiper-button-next {
+        transform: translateY(-50%) scale(0.7);
+    }
+    
+    .swiper-button-prev {
+        left: 0px;
+    }
+    
+    .swiper-button-next {
+        right: 0px;
+    }
 }
 
-/* Medium Devices (481px to 768px) */
+/* Small Mobile to Medium Devices (481px to 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     /* Typography adjustments */
     h2 {
@@ -626,28 +699,118 @@ section {
     
     .name-title {
         font-size: 3rem;
+        text-align: center;
+        width: 100%;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: fade-up 0.5s;
+        margin: 0 auto 15px auto;
     }
     
+    .description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto 15px auto;
+    }
+
     /* Layout adjustments */
     .main-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
         gap: 30px;
     }
     
     .profile-image {
+        width: 100%;
         max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         margin: 0 auto;
     }
     
+    .text-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /* Avatar and bubbles */
+    #avatar-container {
+        width: 80%;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+    
+    #avatar {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    /* Hide some decorative bubbles */
+    .bubble:nth-child(4),
+    .bubble:nth-child(5) {
+        display: none;
+    }
+    
     /* Section adjustments */
+    section {
+        padding: 20px 15px;
+    }
+    
     .about-text {
+        width: 100%;
+        max-width: 100%;
         padding: 25px;
+        margin: 0 auto;
         border-radius: 40px;
+    }
+    
+    /* Text in about section */
+    .about-text p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     /* Reduce size of waiting image */
     #waiting {
         height: 250px;
+    }
+    
+    /* Swiper controls */
+    .swiper-button-prev, 
+    .swiper-button-next {
+        transform: translateY(-50%) scale(0.8);
+    }
+    
+    .swiper-button-prev {
+        left: 5px;
+    }
+    
+    .swiper-button-next {
+        right: 5px;
     }
 }
 
@@ -661,67 +824,36 @@ section {
     .profile-image {
         max-width: 45%;
     }
-}
-
-/* General responsive fixes for all smaller screens */
-@media screen and (max-width: 1024px) {
-    /* Improve scroll snap experience on smaller devices */
-    html {
-        scroll-snap-type: y proximity;
-    }
     
-    /* Adjust animation for performance */
-    body, body.darkmode {
-        background-size: 300% 300%;
-        animation: gradientBG 15s ease infinite;
-    }
-    
-    /* Ensure text content is properly centered */
     .text-content {
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
     }
     
-    /* Adjust swiper navigation for better touch experience */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        width: 36px;
-        height: 36px;
+    /* Swiper container adjustments */
+    .swiper-container {
+        max-width: 90%;
+        margin: 0 auto;
     }
-}
-
-/* Fix for devices with height issues */
-@media screen and (max-height: 600px) {
+    
+    /* Section adjustments */
     section {
-        min-height: auto;
-        padding: 60px 0;
-    }
-    
-    html {
-        scroll-snap-type: none;
-    }
-    
-    .main-content {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 40px 20px;
     }
 }
 
 /* Landscape mode adjustments */
 @media screen and (max-width: 900px) and (orientation: landscape) {
     section {
-        min-height: auto;
-        padding: 40px 0;
-    }
-    
-    html {
-        scroll-snap-type: none;
+        min-height: 120vh; /* Ensure each section takes full viewport height */
+        padding: 40px 20px;
     }
     
     .main-content {
         flex-direction: row;
         gap: 5%;
+        padding: 20px 0;
     }
     
     .profile-image {
@@ -743,281 +875,39 @@ section {
     }
 }
 
-/* Base Mobile Adjustments */
-@media screen and (max-width: 767px) {
-    /* General container adjustments */
-    section {
-        min-height: 100vh;
-        width: 100%;
-        padding: 20px 10px;
-        overflow-x: hidden;
+/* General responsive fixes for all smaller screens */
+@media screen and (max-width: 1024px) {
+    /* Adjust animation for performance */
+    body, body.darkmode {
+        background-size: 300% 300%;
+        animation: none;
     }
     
-    body, html {
-        overflow-x: hidden;
-        width: 100%;
-        max-width: 100%;
+    /* Adjust swiper navigation for better touch experience */
+    .swiper-button-prev, 
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
     }
     
-    /* Fix for the main title */
-    .name-title {
-        font-size: 2.3rem;
-        width: 100%;
-        white-space: normal;
-        overflow: visible;
-        border-right: none;
-        animation: fade-up 0.5s;
-        letter-spacing: 3px;
-        line-height: 1.2;
-    }
-    
-    /* Avatar and profile adjustments */
-    #avatar-container {
-        width: 80%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    
-    #avatar {
-        width: 100%;
-        max-width: 200px;
-    }
-    
-    .profile-image {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    /* Text content container */
-    .text-content {
-        width: 100%;
-        padding: 0 10px;
-    }
-    
-    .main-content {
-        flex-direction: column;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    /* About section */
-    .about-text {
-        width: 100%;
-        padding: 15px 10px;
-        border-radius: 20px;
-        margin: 0 auto;
-    }
-    
+    /* Make sure text container in swiper is full width */
     .text-container {
         width: 100%;
         max-width: 100%;
-        padding: 0 10px;
         margin: 0 auto;
-    }
-    
-    /* Typography for mobile */
-    .description {
-        font-size: 14px;
-        line-height: 1.3;
-        width: 100%;
-        padding: 0 5px;
-    }
-    
-    h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        width: 100%;
-        white-space: normal;
-        overflow: visible;
-        border-right: none;
-        animation: fade-up 0.5s;
-    }
-    
-    /* Button adjustments */
-    .contact-btn {
-        font-size: 14px;
-        padding: 8px 20px;
-    }
-    
-    /* Social icons adjustment */
-    .social-icons {
-        gap: 10px;
-    }
-    
-    .social-icon {
-        width: 35px;
-        height: 35px;
+        padding: 0;
     }
 }
 
-/* Small Phone Specific Fixes */
-@media screen and (max-width: 480px) {
-    /* Further container constraints */
+/* Fix for devices with height issues - BUT keep snap scroll */
+@media screen and (max-height: 600px) {
+    section {
+        min-height: 120vh; /* Ensure each section takes full viewport + extra */
+        padding: 60px 0;
+    }
+    
     .main-content {
-        width: 100%;
-        padding: 10px 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    
-    section {
-        padding: 15px 5px;
-    }
-    
-    /* Even smaller text for tiny screens */
-    .description {
-        font-size: 13px;
-        line-height: 1.2;
-    }
-    
-    /* Ensure avatar fits */
-    #avatar-container {
-        max-width: 180px;
-    }
-    
-    #avatar {
-        max-width: 160px;
-    }
-    
-    /* Swiper fixes for small phones */
-    .swiper-slide {
-        padding: 5px 0;
-    }
-    
-    /* Dot indicators for swiper */
-    .swiper-pagination-bullet {
-        width: 6px;
-        height: 6px;
-        margin: 0 3px;
-    }
-    
-    /* Hide some decorative elements */
-    .bubble {
-        display: none;
-    }
-    
-    /* Force proper sizing of images */
-    .my-image, .anubis-image {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* Fix for section height and swiper */
-@media screen and (max-width: 767px) {
-    /* Swiper container fixes */
-    .swiper-container {
-        width: 100%;
-        height: auto !important;
-        overflow: visible;
-    }
-    
-    .swiper-wrapper {
-        height: auto !important;
-    }
-    
-    .swiper-slide {
-        height: auto !important;
-        width: 100% !important;
-    }
-    
-    /* Fix for pagination */
-    .swiper-pagination {
-        position: relative;
-        bottom: 0;
-        padding-top: 10px;
-    }
-    
-    /* Adjust button positions */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        top: 50%;
-        transform: translateY(-50%) scale(0.7);
-    }
-    
-    .swiper-button-prev {
-        left: 0;
-    }
-    
-    .swiper-button-next {
-        right: 0;
-    }
-    
-    /* Text inside swiper */
-    .swiper-slide p,
-    .about-text p {
-        font-size: 14px;
-        line-height: 1.4;
-        width: 100%;
-        max-width: 100%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        padding: 0 5px;
-    }
-}
-
-/* Special Scrolling Fixes */
-@media screen and (max-width: 767px) {
-    html {
-        scroll-snap-type: none;
-    }
-    
-    section {
-        scroll-snap-align: none;
-    }
-    
-    /* Simplified animations for better performance */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-    
-    @keyframes gradientBG {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
-    }
-    
-    body, body.darkmode {
-        background-size: 200% 200%;
-    }
-}
-
-/* Fix for navigation and theme toggle */
-@media screen and (max-width: 767px) {
-    header {
-        padding: 10px;
-    }
-    
-    .logo {
-        font-size: 16px;
-        margin: 2vh;
-        letter-spacing: 1px;
-    }
-    
-    #theme-switch {
-        top: 15px;
-        right: 15px;
-        transform: scale(0.9);
-    }
-}
-
-/* Fix for horizontal scrolling issues */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-* {
-    max-width: 100%;
-}
-
-/* Ensure content doesn't overflow */
-p, h1, h2, h3, h4, h5, h6, div, section {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }

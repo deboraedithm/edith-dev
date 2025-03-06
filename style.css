@@ -533,91 +533,82 @@ section {
     }
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Media Queries - Fixed for Avatar Size */
 
-@media screen and (max-width: 768px) {
-    /* Typography adjustments */
-    .name-title {
-        font-size: 2.5rem;
+/* Base styles stay the same for large screens */
+
+/* Medium devices (tablets, less than 992px) */
+@media screen and (max-width: 991px) {
+    html {
+        scroll-snap-type: none; /* Disable scroll snapping on smaller devices */
     }
     
-    h2 {
-        font-size: 28px;
-        letter-spacing: 4px;
-        margin-bottom: 3vh;
+    section {
+        min-height: auto;
+        padding: 60px 20px;
+        scroll-snap-align: none;
     }
     
-    .description {
-        font-size: 14px;
-    }
-    
-    /* Layout adjustments */
     .main-content {
         flex-direction: column;
-        gap: 30px;
-        padding: 0 15px;
+        gap: 40px;
     }
     
     .profile-image {
-        max-width: 80%;
+        max-width: 70%;
         margin: 0 auto;
     }
     
-    /* Avatar adjustments */
+    /* Avatar kept original size for tablets */
     #avatar {
-        max-width: 280px;
+        max-width: 400px; /* Keep original max-width */
     }
     
-    /* Social icons */
-    .social-icons {
-        gap: 10px;
-    }
-    
-    .social-icon {
-        width: 35px;
-        height: 35px;
-    }
-    
-    /* About section */
-    .about-text {
-        padding: 25px;
-        border-radius: 30px;
-    }
-    
-    .my-image, .anubis-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    /* Swiper navigation */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Typography adjustments for very small screens */
     .name-title {
-        font-size: 2rem;
-        animation: typing 1.5s steps(13), blink 0.5s step-end infinite alternate;
+        font-size: 3rem;
+        white-space: normal;
+        animation: none;
+        border-right: none;
     }
     
     h2 {
-        font-size: 24px;
-        letter-spacing: 3px;
-        margin-bottom: 2vh;
+        font-size: 32px;
+        white-space: normal;
+        animation: none;
+        border-right: none;
     }
-    
-    /* Layout adjustments */
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 767px) {
     section {
-        padding: 40px 10px;
+        padding: 50px 15px;
     }
     
-    /* Avatar adjustments */
+    .name-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        font-size: 26px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+    
+    /* Only adjust avatar size on smaller phones */
     #avatar {
-        max-width: 220px;
+        max-width: 300px;
+    }
+    
+    .description {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    
+    /* Reduce or hide some bubble animations on mobile */
+    .bubble:nth-child(4), .bubble:nth-child(5) {
+        display: none;
     }
     
     .bubble {
@@ -625,31 +616,86 @@ section {
         height: 8vh;
     }
     
-    /* Bubbles position adjustment */
-    .bubble:nth-child(1) {top: 70px; left: -5px;}
-    .bubble:nth-child(2) {top: 20px; right: 5px;}
+    .about-text {
+        padding: 25px 15px;
+        border-radius: 25px;
+    }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media screen and (max-width: 575px) {
+    body {
+        animation: gradientBG 20s ease infinite; /* Slow down the background animation */
+    }
     
-    /* Button adjustments */
+    body.darkmode {
+        animation: gradientBG 25s ease infinite;
+    }
+    
+    section {
+        padding: 40px 12px;
+    }
+    
+    .profile-image {
+        max-width: 85%;
+    }
+    
+    #avatar {
+        max-width: 220px;
+        animation: float 5s ease-in-out infinite;
+    }
+    
+    .name-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+    
+    .description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    /* Simplify animations further */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    /* Adjust bubble sizes and positioning */
+    .bubble:nth-child(1) {top: 50px; left: 0px; width: 30px; height: 30px;}
+    .bubble:nth-child(2) {top: 20px; right: 0px; width: 40px; height: 40px;}
+    .bubble:nth-child(3) {bottom: 0px; left: 30px; width: 35px; height: 35px;}
+    
+    /* Social icons adjustments */
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Button adjustment */
     .contact-btn {
-        padding: 8px 20px;
+        padding: 8px 18px;
         font-size: 14px;
     }
     
-    /* About section */
-    .about-text {
-        padding: 20px;
-        border-radius: 25px;
-    }
-    
+    /* About section images */
     .my-image, .anubis-image {
         width: 100px;
         height: 100px;
-    }
-    
-    /* Theme switch button */
-    #theme-switch {
-        top: 10px;
-        right: 10px;
     }
     
     /* Swiper adjustments */
@@ -657,26 +703,65 @@ section {
     .swiper-button-next {
         width: 30px;
         height: 30px;
+        transform: scale(0.8);
+    }
+    
+    /* Fix for theme switch button */
+    #theme-switch {
+        top: 10px;
+        right: 10px;
+        transform: scale(0.9);
     }
 }
 
-/* Fix for very small height screens */
-@media screen and (max-height: 600px) {
-    section {
-        padding: 20px 10px;
-        min-height: 600px; /* Ensure minimum height for content */
+/* Very small phones (iPhone SE, etc) */
+@media screen and (max-width: 375px) {
+    .name-title {
+        font-size: 1.8rem;
     }
     
     h2 {
-        margin-bottom: 15px;
-    }
-    
-    .main-content {
-        gap: 20px;
+        font-size: 20px;
     }
     
     #avatar {
         max-width: 180px;
+    }
+    
+    .description {
+        font-size: 13px;
+    }
+    
+    .about-text {
+        padding: 20px 12px;
+        border-radius: 20px;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Height-based adjustments */
+@media screen and (max-height: 700px) {
+    section {
+        padding: 30px 15px;
+    }
+    
+    .name-title {
+        margin-bottom: 10px;
+    }
+    
+    .description {
+        margin-bottom: 15px;
+    }
+    
+    /* Only adjust avatar on shorter screens when needed */
+    @media screen and (max-width: 767px) {
+        #avatar {
+            max-width: 160px;
+        }
     }
     
     .social-icons {
@@ -685,21 +770,45 @@ section {
     }
 }
 
-/* Landscape orientation on small devices */
+/* Landscape mode on phones - critical fix */
 @media screen and (max-height: 500px) and (orientation: landscape) {
+    section {
+        padding: 20px 15px;
+        min-height: 450px;
+    }
+    
     .main-content {
         flex-direction: row;
+        gap: 20px;
     }
     
     .profile-image {
-        max-width: 30%;
+        max-width: 40%;
+    }
+    
+    .text-content {
+        text-align: left;
+    }
+    
+    .title-container {
+        justify-content: flex-start;
+    }
+    
+    .icons-container {
+        justify-content: flex-start;
     }
     
     #avatar {
-        max-width: 150px;
+        max-width: 140px;
     }
     
-    section {
-        min-height: 500px;
+    .name-title, h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .description {
+        font-size: 13px;
+        margin-bottom: 10px;
     }
 }

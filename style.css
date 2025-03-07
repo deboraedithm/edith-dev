@@ -9,13 +9,9 @@
     --light-gradient-color-1: #D9F8FD;
     --light-gradient-color-2: #D9D9FD;
     --light-gradient-color-3: #CBB5FD;
-    --light-gradient-color-4: #C99ABE;
-    --light-gradient-color-5: #9361C4;
     --dark-gradient-color-1: #E9A0BB;
     --dark-gradient-color-2: #161019;
     --dark-gradient-color-3: #563E65;
-    --dark-gradient-color-4: #161019;
-    --dark-gradient-color-5: #49079C;
 }
 
 /* Base Styles */
@@ -30,37 +26,33 @@ html {
     overflow-y: scroll;
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100hv;
+    max-width: 100%;
     background: linear-gradient(-70deg, 
     var(--light-gradient-color-1), 
     var(--light-gradient-color-2), 
-    var(--light-gradient-color-3), 
-    var(--light-gradient-color-4),
-    var(--light-gradient-color-5));
-    background-size: 400% 400%;
-    animation: none;
-    /*animation: gradientBG 10s ease infinite;
+    var(--light-gradient-color-3));
+    background-size: 200% 200%;
+    animation: gradientBG 30s ease infinite;
     color: var(--blackFontColor);
-    transition: 0.5s, color 0.5s;*/
+    transition: 1s, color 1s;
 }
 
 body.darkmode{
     background: linear-gradient(-70deg, 
     var(--dark-gradient-color-1), 
     var(--dark-gradient-color-2), 
-    var(--dark-gradient-color-3), 
-    var(--dark-gradient-color-4),
-    var(--dark-gradient-color-5));
-    background-size: 400% 400%;
-    animation: none;
-    /*animation: gradientBG 15s ease infinite;
+    var(--dark-gradient-color-3));
+    background-size: 200% 200%;
+    animation: gradientBG 30s ease infinite;
     color: var(--whiteFontColor);
-    transition: 1s, color 1s;*/
+    transition: 1s, color 1s;
 }
 
 /* Typography */
@@ -201,6 +193,7 @@ header {
 section {
     min-height: 100vh;
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     max-height: fit-content;
@@ -253,6 +246,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%; 
+    max-width: 100%;
 }
 
 /* Avatar and Bubbles */

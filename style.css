@@ -29,6 +29,7 @@ html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -63,10 +64,10 @@ body.darkmode{
 /* Typography */
 h2{
     font-family: "VT323", serif;
-    letter-spacing: 6px;
-    font-size: 40px;
+    letter-spacing: 3px;
+    font-size: 28px;
     margin-top: 0;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
     color: var(--darkAccentColor);
     max-width: max-content;
     animation: blink 0.5s step-end infinite alternate;
@@ -80,21 +81,22 @@ h2{
 }
 
 .name-title {
-    max-width: max-content;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 4rem;
+    font-size: 1.8rem;
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin: 0 auto 15px auto;
     font-weight: 500;
     font-family: "VT323", serif;
     color: var(--darkAccentColor);
-    letter-spacing: 6px;
-    animation: typing 2s steps(13), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid;
+    letter-spacing: 2px;
+    /*animation: typing 2s steps(13), blink 0.5s step-end infinite alternate;*/
+    white-space: normal;
+    overflow: visible;
+    /*border-right: 2px solid;*/
+    animation: fade-up 0.5s;
 }
 
 .darkmode .name-title {
@@ -104,9 +106,13 @@ h2{
 .description {
     font-family: "Quicksand", sans-serif;
     line-height: 1.3;
-    margin-bottom: 30px;
-    font-size: 16px;
-    letter-spacing: 1px;
+    margin: 0 auto 15px auto;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 .highlight {
@@ -139,13 +145,15 @@ h2{
     border-color: transparent;
     border-radius: 50%;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     display: flex;
     background: none;
     animation: fade-up 0.5s;
     z-index: 9999;
     cursor: pointer;
+    width: 32px;
+    height: 32px;
 }
 
 #theme-switch img:last-child{
@@ -182,9 +190,9 @@ header {
 .logo {
     font-family: "VT323", serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
-    margin: 3vh;
+    margin: 2vh;
 }
 
 /* Section Styling */
@@ -198,36 +206,44 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 0;
+    padding: 15px 10px;
 }
 
 /* Main Content */
 .main-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    gap: 6%;
-    padding: 0 20px;
+    gap: 20px;
+    padding: 0;
     animation: fade-up 0.5s;
 }
 
 .profile-image {
-    min-width: none;
-    max-width: 40%;
-    position: relative;
+    width: 100%;
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .text-content {
     width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .title-container {
@@ -239,20 +255,20 @@ section {
 
 /* Avatar and Bubbles */
 #avatar-container {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     position: relative;
-    width: 100%;
-    max-width: max-content;
     align-items: center;
     text-align: center;
 }
 
 #avatar{
-    display: grid;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    max-width: 400px;
-    min-width: 50px;
     object-fit: cover;
     transition: opacity 0.3s ease, transform 0.2s ease;
     animation: float 3s ease-in-out infinite;
@@ -264,9 +280,9 @@ section {
 #avatar-container::before {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 50px;
+    width: 30px;
+    height: 30px;
+    left: 40px;
     background: rgba(100, 149, 237, 0.3);
     border-radius: 50%;
     z-index: 1;
@@ -275,8 +291,8 @@ section {
 
 .bubble {
     position: absolute;
-    width: 10vh;
-    height: 10vh;
+    width: 8vh;
+    height: 8vh;
     min-width: auto;
     min-height: auto;
     background: rgba(100, 149, 237, 0.3);
@@ -284,11 +300,11 @@ section {
     animation: float 6s infinite ease-in-out;
 }
 
-.bubble:nth-child(1) {top: 100px; left: -10px; animation-duration: 4s;}
-.bubble:nth-child(2) {top: 30px; right: 10px; animation-duration: 5s;}
-.bubble:nth-child(3) {bottom: -5px; left: 50px; animation-duration: 6s;}
-.bubble:nth-child(4) {bottom: 5px; right: 5px; animation-duration: 4s;}
-.bubble:nth-child(5) {top: 1px; left: 100px; animation-duration: 3;}
+.bubble:nth-child(1) {top: 80px; left: -5px; animation-duration: 4s;}
+.bubble:nth-child(2) {top: 20px; right: 5px; animation-duration: 5s;}
+.bubble:nth-child(3) {bottom: -5px; left: 40px; animation-duration: 6s;}
+.bubble:nth-child(4) {bottom: 3px; right: 1px; animation-duration: 4s;}
+.bubble:nth-child(5) {top: 1px; left: 10px; animation-duration: 3;}
 
 /* Social Icons */
 .icons-container {
@@ -303,14 +319,15 @@ section {
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border: 1px solid var(--darkBgColor);
     border-radius: 50%;
     display: flex;
@@ -337,10 +354,10 @@ section {
 .contact-btn {
     display: inline-block;
     color: var(--blackFontColor);
-    padding: 10px 25px;
+    padding: 8px 20px;
     border: 1px solid var(--blackFontColor);
     background: none;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "VT323", serif;
     letter-spacing: 2px;
     cursor: pointer;
@@ -363,7 +380,7 @@ section {
 /* Section Specific Styles */
 .text-container {
     position: relative;
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     overflow: visible;
@@ -374,16 +391,25 @@ section {
     user-select: none;
     width: 100%;
     height: auto;
-    padding: 35px;
+    padding: 15px 10px;
     border-radius: 50px;
     backdrop-filter: blur(30px);
     border: 1px solid rgba(227, 215, 254, 0.5);
     text-align: center;
 }
 
+.about-text p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .my-image, .anubis-image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 20px;
     border-radius: 50%;
     border: 3px solid var(--lightBgColor);
@@ -400,8 +426,8 @@ section {
 
 #waiting{
     display: block;
-    height: 300px;
-    max-width: 400px;
+    height: 200px;
+    max-width: 300px;
     min-width: 50px;
     transition: opacity 0.3s ease, transform 0.2s ease;
     z-index: -1;
@@ -414,7 +440,7 @@ section {
 #skills > h3, p,
 #projects > p,
 #contact > p {
-    font-size: medium;
+    font-size: 14px;
     max-height: max-content;
     max-width: fit-content;
     margin: 0 2vh;
@@ -438,7 +464,7 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* Swiper navigation buttons */
@@ -448,17 +474,17 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     z-index: 10;
 }
 
 .swiper-button-prev {
-    left: 2px;
+    left: 0;
 }
 
 .swiper-button-next {
-    right: 2px;
+    right: 0;
 }
 
 .swiper-pagination {
@@ -498,7 +524,7 @@ section {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
 
@@ -535,289 +561,96 @@ section {
     }
 }
 
-/* Extra Small Mobile (up to 480px) */
-@media screen and (max-width: 480px) {
-    /* Typography adjustments */
+/* Small Mobile (481px - 767px) */
+@media screen and (min-width: 481px) {
     h2 {
-        font-size: 28px;
-        letter-spacing: 3px;
-        margin-bottom: 3vh;
+        font-size: 32px;
+        letter-spacing: 4px;
+        margin-bottom: 4vh;
     }
     
     .name-title {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
-        text-align: center;
-        width: 100%;
-        white-space: normal;
-        overflow: visible;
-        border-right: none;
-        animation: fade-up 0.5s;
-        margin: 0 auto 15px auto;
+        font-size: 2.2rem;
+        letter-spacing: 3px;
     }
     
     .description {
-        font-size: 13px;
-        letter-spacing: 0.5px;
-        text-align: center;
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0 auto 15px auto;
+        font-size: 14px;
+        letter-spacing: 0.8px;
     }
     
-    /* Layout adjustments */
-    .main-content {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        margin: 0 auto;
-        gap: 20px;
-    }
-    
-    .profile-image {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    .text-content {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    /* Avatar and bubbles */
     #avatar-container {
-        width: 80%;
-        max-width: 180px;
-        margin: 0 auto;
+        max-width: 220px;
     }
     
     #avatar {
-        width: 100%;
-        max-width: 160px;
-        height: auto;
-    }
-    
-    /* Hide some decorative bubbles */
-    .bubble:nth-child(4),
-    .bubble:nth-child(5) {
-        display: none;
-    }
-    
-    /* Section adjustments */
-    section {
-        padding: 15px 10px;
-    }
-    
-    .about-text {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px 10px;
-        margin: 0 auto;
-        border-radius: 30px;
+        max-width: 200px;
     }
     
     .my-image, .anubis-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    /* Social icons */
-    .social-icons {
-        gap: 10px;
+        width: 130px;
+        height: 130px;
     }
     
     .social-icon {
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
     }
     
-    /* Fix button size */
     .contact-btn {
-        padding: 8px 20px;
-        font-size: 14px;
+        padding: 9px 22px;
+        font-size: 15px;
     }
     
-    /* Text in about section */
+    .about-text {
+        padding: 20px 15px;
+        border-radius: 35px;
+    }
+    
     .about-text p {
-        font-size: 14px;
-        line-height: 1.4;
-        margin-bottom: 10px;
-        width: 100%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        font-size: 15px;
     }
     
-    /* Animation adjustments - reduce movement */
-    @keyframes float {
-        0%, 100%{
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-    
-    /* Swiper controls */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        transform: translateY(-50%) scale(0.7);
-    }
-    
-    .swiper-button-prev {
-        left: 0px;
-    }
-    
-    .swiper-button-next {
-        right: 0px;
+    /* Show one more bubble */
+    .bubble:nth-child(4) {
+        display: block;
+        bottom: 5px; 
+        right: 5px; 
+        animation-duration: 4s;
     }
 }
 
-/* Small Mobile to Medium Devices (481px to 768px) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    /* Typography adjustments */
+/* Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+    
     h2 {
-        font-size: 34px;
-        letter-spacing: 4px;
+        font-size: 36px;
+        letter-spacing: 5px;
+        margin-bottom: 5vh;
     }
     
     .name-title {
         font-size: 3rem;
-        text-align: center;
-        width: 100%;
-        white-space: normal;
-        overflow: visible;
-        border-right: none;
-        animation: fade-up 0.5s;
-        margin: 0 auto 15px auto;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid;
+        animation: typing 2s steps(13), blink 0.5s step-end infinite alternate;
     }
     
     .description {
-        width: 100%;
-        max-width: 100%;
-        font-size: 14px;
-        text-align: center;
-        padding: 0;
-        margin: 0 auto 15px auto;
-    }
-
-    /* Layout adjustments */
-    .main-content {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        margin: 0 auto;
-        gap: 30px;
-    }
-    
-    .profile-image {
-        width: 100%;
-        max-width: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    .text-content {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    /* Avatar and bubbles */
-    #avatar-container {
-        width: 80%;
-        max-width: 220px;
-        margin: 0 auto;
-    }
-    
-    #avatar {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-    
-    /* Hide some decorative bubbles */
-    .bubble:nth-child(4),
-    .bubble:nth-child(5) {
-        display: none;
-    }
-    
-    /* Section adjustments */
-    section {
-        padding: 20px 15px;
-    }
-    
-    .about-text {
-        width: 100%;
-        max-width: 100%;
-        padding: 25px;
-        margin: 0 auto;
-        border-radius: 40px;
-    }
-    
-    /* Text in about section */
-    .about-text p {
         font-size: 15px;
-        line-height: 1.5;
-        margin-bottom: 12px;
-        width: 100%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
     }
     
-    /* Reduce size of waiting image */
-    #waiting {
-        height: 250px;
-    }
-    
-    /* Swiper controls */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        transform: translateY(-50%) scale(0.8);
-    }
-    
-    .swiper-button-prev {
-        left: 5px;
-    }
-    
-    .swiper-button-next {
-        right: 5px;
-    }
-}
-
-/* Tablets and Smaller Desktops (769px to 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Layout adjustments */
     .main-content {
+        flex-direction: row;
+        padding: 0 15px;
         gap: 4%;
     }
     
@@ -826,88 +659,171 @@ section {
     }
     
     .text-content {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+        text-align: left;
+        align-items: flex-start;
     }
     
-    /* Swiper container adjustments */
-    .swiper-container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-    
-    /* Section adjustments */
-    section {
-        padding: 40px 20px;
-    }
-}
-
-/* Landscape mode adjustments */
-@media screen and (max-width: 900px) and (orientation: landscape) {
-    section {
-        min-height: 120vh; /* Ensure each section takes full viewport height */
-        padding: 40px 20px;
-    }
-    
-    .main-content {
-        flex-direction: row;
-        gap: 5%;
-        padding: 20px 0;
-    }
-    
-    .profile-image {
-        max-width: 35%;
+    #avatar-container {
+        max-width: 250px;
     }
     
     #avatar {
-        max-width: 200px;
+        max-width: 230px;
     }
     
-    /* Reduce animation movement */
+    .bubble:nth-child(5) {
+        display: block;
+        top: 1px; 
+        left: 100px; 
+        animation-duration: 3s;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+    
+    .social-icon {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .contact-btn {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+    
+    .about-text {
+        padding: 30px 25px;
+        border-radius: 40px;
+    }
+    
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .my-image, .anubis-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    #waiting {
+        height: 250px;
+        max-width: 350px;
+    }
+    
+    #skills > h3, p,
+    #projects > p,
+    #contact > p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .swiper-button-prev, 
+    .swiper-button-next {
+        transform: translateY(-50%) scale(0.9);
+    }
+    
     @keyframes float {
         0%, 100%{
             transform: translateY(0);
         }
         50% {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
         }
     }
 }
 
-/* General responsive fixes for all smaller screens */
-@media screen and (max-width: 1024px) {
-    /* Adjust animation for performance */
-    body, body.darkmode {
-        background-size: 300% 300%;
-        animation: none;
-    }
-    
-    /* Adjust swiper navigation for better touch experience */
-    .swiper-button-prev, 
-    .swiper-button-next {
-        width: 36px;
-        height: 36px;
-    }
-    
-    /* Make sure text container in swiper is full width */
-    .text-container {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0;
-    }
-}
-
-/* Fix for devices with height issues - BUT keep snap scroll */
-@media screen and (max-height: 600px) {
-    section {
-        min-height: 120vh; /* Ensure each section takes full viewport + extra */
-        padding: 60px 0;
+/* Desktop (1024px - 1439px) */
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 18px;
     }
     
     .main-content {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        max-width: 1000px;
+        padding: 0 20px;
+        gap: 6%;
+    }
+    
+    h2 {
+        font-size: 40px;
+        letter-spacing: 6px;
+    }
+    
+    .name-title {
+        font-size: 4rem;
+        letter-spacing: 6px;
+        margin-bottom: 30px;
+    }
+    
+    .description {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .profile-image {
+        max-width: 40%;
+    }
+    
+    #avatar-container {
+        max-width: 350px;
+    }
+    
+    #avatar {
+        max-width: 320px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .about-text {
+        padding: 35px;
+        border-radius: 50px;
+    }
+    
+    .my-image, .anubis-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #waiting {
+        height: 300px;
+        max-width: 400px;
+    }
+    
+    @keyframes float {
+        0%, 100%{
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+}
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 20px;
+    }
+    
+    .main-content {
+        max-width: 1200px;
+    }
+    
+    #avatar-container {
+        max-width: 400px;
+    }
+    
+    #avatar {
+        max-width: 380px;
+    }
+    
+    .about-text {
+        max-width: 1000px;
+        margin: 0 auto;
     }
 }

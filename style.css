@@ -29,6 +29,7 @@ html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -38,12 +39,9 @@ body {
     background: linear-gradient(-70deg, 
     var(--light-gradient-color-1), 
     var(--light-gradient-color-2), 
-    var(--light-gradient-color-3), 
-    var(--light-gradient-color-4),
-    var(--light-gradient-color-5));
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    color: var(--blackFontColor);
+    var(--light-gradient-color-3));
+    background-size: 200% 200%;
+    animation:none;
     transition: 0.5s, color 0.5s;
 }
 
@@ -51,12 +49,9 @@ body.darkmode{
     background: linear-gradient(-70deg, 
     var(--dark-gradient-color-1), 
     var(--dark-gradient-color-2), 
-    var(--dark-gradient-color-3), 
-    var(--dark-gradient-color-4),
-    var(--dark-gradient-color-5));
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    color: var(--whiteFontColor);
+    var(--dark-gradient-color-3));
+    background-size: 200% 200%;
+    animation: none;
     transition: 1s, color 1s;
 }
 
@@ -156,6 +151,39 @@ h2{
 }
 
 .darkmode #theme-switch img:last-child{
+    display: block;
+}
+
+/* Back to top Button */
+#backtotop {
+    padding: 0;
+    border-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    background: none;
+    animation: fade-up 0.5s;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#backtotop.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#backtotop img:last-child{
+    display: none;
+}
+.darkmode #backtotop img:first-child{
+    display: none;
+}
+
+.darkmode #backtotop img:last-child{
     display: block;
 }
 

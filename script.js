@@ -94,8 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     
     const hoverImages = document.querySelectorAll('.hover-sound');
@@ -114,3 +112,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// --- Back to top function ---
+const toTop = document.querySelector('#backtotop');
+
+window.addEventListener('scroll', () =>{
+    if (window.pageYOffset > 300){
+        toTop.classList.add('active');
+    } else {
+        toTop.classList.remove('active');
+    }
+    toTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+})

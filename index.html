@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debora Edith | Full Stack Developer</title>
+  <meta name="description" content="Portfolio showcasing my skills, projects, and experience as a Full Stack Developer">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="midia/favicon.ico" type="image/x-icon">
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  </style>
+
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <i data-lucide="code" class="logo-icon"></i>
+        <span class="logo-text">edith.dev</span>
+      </div>
+      
+      <nav class="desktop-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
+          <i data-lucide="sun" class="theme-icon-light"></i>
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+        </button>
+        <a href="https://github.com/deboraedithm" target="_blank" rel="noreferrer" class="icon-button" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" rel="noreferrer" class="icon-button" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:deboraedithm@gmail.com" class="icon-button" aria-label="Email">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+
+      <button class="mobile-menu-button icon-button" id="mobile-menu-button" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+  </header>
+
+<!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <i data-lucide="code" class="logo-icon"></i>
+          <span class="logo-text">edith.dev</span>
+        </div>
+        <button class="icon-button" id="mobile-menu-close" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <button id="mobile-theme-toggle" class="icon-button" aria-label="Toggle theme">
+          <i data-lucide="sun" class="theme-icon-light"></i>
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+        </button>
+        <a href="https://github.com/deboraedithm" target="_blank" rel="noreferrer" class="icon-button" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" rel="noreferrer" class="icon-button" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:deboraedithm@gmail.com" class="icon-button" aria-label="Email">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <button id="back-to-top" class="icon-button back-to-top" aria-label="Back to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+  <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">My Portfolio</div>
+          <h1 class="hero-title">Hi, I'm Debs!</h1>
+          <p class="hero-description">
+            A curious mind with an independent spirit, passionate about coding and gaming. Aspiring Full-Stack Developer from Brazil, driven to craft innovative solutions and bring creative ideas to life.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="button button-primary">
+              View My Work
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#contact" class="button button-outline">
+              Get In Touch
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/deboraedithm" target="_blank" rel="noreferrer" class="social-icon">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" rel="noreferrer" class="social-icon">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="mailto:deboraedithm@gmail.com" class="social-icon">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-video">
+          <div class="profile-card">
+            <video id="meuVideo" src="midia/meu-avatar.mp4" loop muted autoplay velo></video>
+        </div>
+      </div>
+    </section>
+
+  <!-- About Me -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About me</h2>
+        </div>
+        <div class="about-grid">
+          <!-- About 1 -->
+          <button onclick="abrirModal()"><br><i data-lucide="arrow-up-right" class="about-icon purple"></i><p class="section-description">
+            A little bit about me and my journey as a developer.
+          </p></button>
+
+          <div id="meuModal" class="overlay">
+            <div class="modal-content">
+                <span class="close-btn" onclick="fecharModal()">&times;</span>
+
+          <div class="card about-card">
+            <h3 class="card-title">Hello there!</h3>
+            <p class="card-description">
+              I'm a 26-year-old tech alchemist from São Bernardo do Campo, crafting magic at the crossroads of games, technology, and art — with my feline overlord, Anubis, overseeing every keystroke. 🐈‍⬛💻🎮</p><br>
+
+              <h6>🚀 The Mission:</h6>
+              <p class="card-description">Right now, I'm deep in the trenches of <strong>Software Analysis and Development at FIAP</strong>, leveling up my skills in both Front-end and Back-end development. My goal? Not just to become a Full Stack Developer — but to master the art of building seamless, innovative solutions that don't just work—they wow.</p><br>
+
+              <h6>🎮 The Origin Story:</h6>
+              <p class="card-description">It all started when I was six, side-by-side with my dad, conquering virtual worlds. Those pixelated adventures sparked a lifelong obsession with the "how" behind the magic. Adulthood may have forced a few game pauses, but that curiosity never hit pause.</p><br>
+
+              <h6>🧠 Mind Meets Machine:</h6>
+              <p class="card-description">In school, I was adrift — until I stumbled upon psychology. The human mind fascinated me, leading me to dive headfirst into cognitive processes, behavior patterns, and user experiences. (Yes, I've analyzed you — but not in a creepy way!) After graduating, my HR career taught me how people tick and how teams thrive. But I knew there was more.</p><br>
+
+              <h6>💡 Enter Code:</h6>
+              <p class="card-description">Tech was the missing piece. Now, I'm fusing my analytical mindset with my technical drive to create solutions that aren't just functional — they resonate. I'm not here to follow trends — I'm here to set them. I'm building experiences that feel intuitive, human, and a little bit magical.</p><br>
+
+              <h6>🌟 Next Level:</h6>
+              <p class="card-description">I'm hungry for challenges — whether it's coding something groundbreaking, geeking out over a new game, or convincing Anubis to stop walking on my keyboard. (Progress is… slow.) 😼</p>
+          </div>
+            </div>
+          </div>
+
+<!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects that showcase my skills</h2>
+          <p class="section-description">
+            A collection of my most recent and impactful development work, demonstrating my technical abilities and problem-solving skills.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="card project-card">
+            <div class="project-image gradient-purple">
+              <div class="project-title-overlay">Coming soon</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Coming soon</h3>
+              <p class="card-description">
+                Coming soon
+              </p>
+              <div class="tag-container">
+                <span class="tag small">Coming soon</span>
+                
+              </div>
+              <div class="card-footer">
+                <a href="#" class="text-button">
+                  View Project <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card project-card">
+            <div class="project-image gradient-peach">
+              <div class="project-title-overlay">Coming soon</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Coming soon</h3>
+              <p class="card-description">
+                Coming soon
+              </p>
+              <div class="tag-container">
+                <span class="tag small">Coming soon</span>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="text-button">
+                  View Project <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3
+          <div class="card project-card">
+            <div class="project-image gradient-teal">
+              <div class="project-title-overlay">Coming soon</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Coming soon</h3>
+              <p class="card-description">
+                Coming soon
+              </p>
+              <div class="tag-container">
+                <span class="tag small">Coming soon</span>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="text-button">
+                  View Project <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>-->
+
+          <!-- Project 4
+          <div class="card project-card">
+            <div class="project-image gradient-purple">
+              <div class="project-title-overlay">Coming soon</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Coming soon</h3>
+              <p class="card-description">
+                Coming soon
+              </p>
+              <div class="tag-container">
+                <span class="tag small">Coming soon</span>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="text-button">
+                  View Project <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </section>
+
+<!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Skills & Expertise</h2>
+          <p class="section-description">
+            A comprehensive overview of my technical competencies across various domains and technologies.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="card skill-card">
+            <i data-lucide="layout" class="skill-icon purple"></i>
+            <h3 class="card-title">Frontend Development</h3>
+            <p class="card-description">
+              Creating responsive, accessible, and performant user interfaces with modern frameworks and libraries.
+            </p>
+            <div class="tag-container">
+              <span class="tag small outline">React</span>
+              <span class="tag small outline">Next.js</span>
+              <span class="tag small outline">JavaScript</span>
+              <span class="tag small outline">HTML5/CSS3</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="card skill-card">
+            <i data-lucide="server" class="skill-icon peach"></i>
+            <h3 class="card-title">Backend Development</h3>
+            <p class="card-description">
+              Building scalable and robust server-side applications with various technologies and databases.
+            </p>
+            <div class="tag-container">
+              <span class="tag small outline">C#</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="card skill-card">
+            <i data-lucide="megaphone" class="skill-icon teal"></i>
+            <h3 class="card-title">Communication & Strategy</h3>
+            <p class="card-description">
+              Leveraging strategic thinking and communication to drive business goals, build relationships, and execute successful initiatives.
+            </p>
+            <div class="tag-container">
+              <span class="tag small outline">Public Speaking</span>
+              <span class="tag small outline">Content Strategy</span>
+              <span class="tag small outline">Stakeholder Management</span>
+              <span class="tag small outline">Team Collaboration</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="card skill-card">
+            <i data-lucide="brush" class="skill-icon blue"></i>
+            <h3 class="card-title">Design & User Experience</h3>
+            <p class="card-description">
+              Crafting intuitive, visually appealing, and user-centered design solutions that enhance digital experiences and solve complex interaction challenges.
+            </p>
+            <div class="tag-container">
+              <span class="tag small outline">UI/UX Design</span>
+              <span class="tag small outline">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Experience & Qualifications</h2>
+          <p class="section-description">
+            My professional journey, educational background, and industry certifications.
+          </p>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="experience-block">
+          <h3 class="block-title">Work Experience</h3>
+          <div class="experience-list">
+            <!-- Job 1 -->
+            <div class="card experience-card">
+              <div class="experience-header">
+                <i data-lucide="briefcase" class="experience-icon purple"></i>
+                <div>
+                  <h4 class="experience-title">Junior P&C Analyst</h4>
+                  <div class="experience-subtitle">Valtech Brasil | 2023 - Present</div>
+                </div>
+              </div>
+              <div class="experience-content">
+                <p class="experience-description">
+                  Managed benefits, wellness programs, and employee experience initiatives for LATAM P&C, overseeing onboarding, offboarding, HR analytics and engagement. 
+                </p>
+                <ul class="experience-details">
+                  <li>Manage benefits, wellness programs, and employee experience improvements for LATAM P&C.</li>
+                  <li>Oversee onboarding, offboarding, and support P&C-related documentation and processes.</li>
+                  <li>Lead employee entry, retention initiatives, and support climate and D&I committees.</li>
+                  <li>Analyze HR metrics and implement mental health and well-being initiatives.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="card experience-card">
+              <div class="experience-header">
+                <i data-lucide="briefcase" class="experience-icon teal"></i>
+                <div>
+                  <h4 class="experience-title">Junior HR Operations Analyst</h4>
+                  <div class="experience-subtitle">SGF Global | 2023 - 2023</div>
+                </div>
+              </div>
+              <div class="experience-content">
+                <p class="experience-description">
+                  Coordinated employee admissions, terminations, and ensured compliance with labor laws while overseeing monthly and annual benefits management.
+                </p>
+                <ul class="experience-details">
+                  <li>Provide support to LATAM & NA employees and clients in Brazil.</li>
+                  <li>Manage payroll process, including salary calculations, benefits, deductions, taxes, and social charges.</li>
+                  <li>Coordinate employee admission and termination processes, including contracts, registrations, and severance calculations.</li>
+                  <li>Oversee monthly and annual benefits management and ensure compliance with labor laws and regulations.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <!-- Education -->
+        <div class="experience-block">
+          <h3 class="block-title">Education</h3>
+          <div class="education-grid">
+            <!-- Education 1 -->
+            <div class="card education-card">
+              <div class="experience-header">
+                <i data-lucide="graduation-cap" class="experience-icon blue"></i>
+                <div>
+                  <h4 class="experience-title">Technologist degree in System Analysis and Dev.</h4>
+                  <div class="experience-subtitle">FIAP | 2025 - 2027</div>
+                </div>
+              </div>
+              <div class="experience-content">
+                <p class="experience-description">
+                  Developing expertise in software development, systems architecture, and scalable solutions through hands-on projects and innovative challenges in the leading technology university in Brazil.
+                </p>
+              </div>
+            </div>
+
+            <!-- Education 2 -->
+            <div class="card education-card">
+              <div class="experience-header">
+                <i data-lucide="graduation-cap" class="experience-icon lilac"></i>
+                <div>
+                  <h4 class="experience-title">Bachelor of Psychology</h4>
+                  <div class="experience-subtitle">Anhembi Morumbi University | 2018 - 2023</div>
+                </div>
+              </div>
+              <div class="experience-content">
+                <p class="experience-description">
+                  Deepening understanding of human behavior, mental processes, and psychological theories, with a focus on research, analysis, and improving mental well-being.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="experience-block">
+          <h3 class="block-title">Certifications</h3>
+          <div class="certifications-grid">
+            <!-- Certification 1 -->
+            <div class="card certification-card">
+              <div class="experience-header">
+                <i data-lucide="scroll-text" class="experience-icon dark"></i>
+                <div>
+                  <h4 class="experience-title">Programming logic</h4>
+                  <div class="experience-subtitle">Trybe | 2025</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certification 2 -->
+            <div class="card certification-card">
+              <div class="experience-header">
+                <i data-lucide="scroll-text" class="experience-icon purple"></i>
+                <div>
+                  <h4 class="experience-title">JavaScript from Scratch</h4>
+                  <div class="experience-subtitle">Trybe | 2025</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certification 3 -->
+            <div class="card certification-card">
+              <div class="experience-header">
+                <i data-lucide="scroll-text" class="experience-icon teal"></i>
+                <div>
+                  <h4 class="experience-title">HTML5 e CSS3</h4>
+                  <div class="experience-subtitle">Cursoemvídeo | 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-description">
+            Have a project in mind? I'd love to hear about it. Get in touch and let's create something amazing.
+          </p>
+        </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="card contact-info-card">
+              <h3 class="contact-title">Contact Information</h3>
+              <p class="contact-description">
+                Feel free to reach out through any of these channels.
+              </p>
+              <div class="contact-methods">
+                <a href="mailto:deboraedithm@gmail.com" class="contact-method">
+                  <i data-lucide="at-sign" class="contact-icon purple"></i>
+                  <div>
+                    <h4 class="contact-method-title">Email</h4>
+                    <p class="contact-method-value">deboraedithm@gmail.com</p>
+                  </div>
+                </a>
+                <a href="tel:+5511952461749" class="contact-method">
+                  <i data-lucide="phone" class="contact-icon teal"></i>
+                  <div>
+                    <h4 class="contact-method-title">Phone</h4>
+                    <p class="contact-method-value">+55 (11) 95246-1749</p>
+                  </div>
+                </a>
+                <a href="https://maps.app.goo.gl/F5o34Q6HZ95kXenw9" class="contact-method">
+                  <i data-lucide="map-pin" class="contact-icon peach"></i>
+                  <div>
+                    <h4 class="contact-method-title">Location</h4>
+                    <p class="contact-method-value">São Bernardo do Campo, SP | BR</p>
+                  </div>
+                </a>
+                <a href="https://github.com/deboraedithm" target="_blank" rel="noreferrer" class="contact-method">
+                  <i data-lucide="github" class="contact-icon dark"></i>
+                  <div>
+                    <h4 class="contact-method-title">GitHub</h4>
+                    <p class="contact-method-value">github.com/deboraedithm</p>
+                  </div>
+                </a>
+                <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" rel="noreferrer" class="contact-method">
+                  <i data-lucide="linkedin" class="contact-icon blue"></i>
+                  <div>
+                    <h4 class="contact-method-title">LinkedIn</h4>
+                    <p class="contact-method-value">linkedin.com/in/debora-edith/</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo">
+            <i data-lucide="code" class="logo-icon"></i>
+            <span class="logo-text">edith.dev</span>
+          </div>
+          <p class="footer-description">
+            System Analysis and Development student passionate about coding, transforming ideas into reality, and continuously learning to create innovative solutions.
+          </p>
+        </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          © <span id="current-year"></span> Débora Edith. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

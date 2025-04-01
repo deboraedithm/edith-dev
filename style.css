@@ -129,6 +129,11 @@
     margin-bottom: var(--spacing-md);
     font-family: "Inter", sans-serif;
   }
+
+  li {
+    margin-bottom: var(--spacing-md);
+    font-family: "Inter", sans-serif;
+  }
   
   a {
     color: var(--color-purple);
@@ -661,7 +666,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
-    
   }
   
   .education-grid,
@@ -696,19 +700,26 @@
   
   .experience-description {
     color: var(--color-muted);
-    margin-bottom: var(--spacing-md);
-    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    font-size: 0.850rem;
   }
   
   .experience-details {
+    display: block;
     padding-left: var(--spacing-lg);
-    font-size: 0.875rem;
+    font-size: 0.700rem;
+    padding-right: var(--spacing-xs);
+    color: var(--color-muted);
   }
   
   .experience-details li {
     list-style-position: inside;
     margin-bottom: var(--spacing-md);
-    padding-left: var(--spacing-sm);
+    padding-left: var(--spacing-xs);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
   }
   
   /* Contact Section */

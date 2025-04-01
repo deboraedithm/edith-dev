@@ -150,7 +150,7 @@ function toggleDarkTheme() {
 
 // Video playback speed control
 const video = document.getElementById('meuVideo');
-video.playbackRate = 2.0;
+video.playbackRate = 1.5;
 
 // Back to Top Button
 const backToTopButton = document.querySelector('#back-to-top');

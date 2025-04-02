@@ -6,7 +6,7 @@ If you discover a security vulnerability in this project, please report it to my
 
 To report a vulnerability:
 
-1. **Do not open a public issue**. Please email me directly at [deboraedithm@gmail.com] to disclose the issue.
+1. **Do not open a public issue**. Please email me directly to disclose the issue.
 2. Provide a detailed description of the vulnerability, including:
    - Steps to reproduce
    - Potential impact

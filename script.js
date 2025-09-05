@@ -57,20 +57,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const copyEmailBtn = document.getElementById('copyEmailBtn');
 
-    if (copyEmailBtn) {
-        copyEmailBtn.addEventListener('click', () => {
-            const email = 'deboraedithm@gmail.com';
-            
-            navigator.clipboard.writeText(email).then(() => {
-                const originalText = copyEmailBtn.textContent;
-                copyEmailBtn.textContent = 'Email Copied!';
-                
-                setTimeout(() => {
-                    copyEmailBtn.textContent = originalText;
-                }, 2000); 
+if (copyEmailBtn) {
+    const originalText = copyEmailBtn.innerHTML;
 
-            }).catch(err => {
-                console.error('Failed to copy email: ', err);
-            });
+    copyEmailBtn.addEventListener('click', () => {
+        const email = 'deboraedithm@gmail.com'; 
+        
+        if (copyEmailBtn.classList.contains('copied')) {
+            return; 
+        }
+
+        navigator.clipboard.writeText(email).then(() => {
+            copyEmailBtn.classList.add('copied');
+            
+            copyEmailBtn.innerHTML = `<i class="ph ph-check-circle"></i> Email Copied!`;
+            
+            setTimeout(() => {
+                copyEmailBtn.classList.remove('copied'); 
+                copyEmailBtn.innerHTML = originalText;
+            }, 2500); 
+
+        }).catch(err => {
+            console.error('Failed to copy email: ', err);
+            copyEmailBtn.innerHTML = 'Error!';
+            
+            setTimeout(() => {
+                copyEmailBtn.innerHTML = originalText;
+            }, 2500);
         });
-    }
+    });
+}

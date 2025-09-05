@@ -1,43 +1,28 @@
-# Security Policy
+# Política de Segurança
 
-## Reporting a Vulnerability
+A segurança deste projeto é uma prioridade. Agradecemos imensamente a contribuição da comunidade na descoberta e no relato responsável de vulnerabilidades.
 
-If you discover a security vulnerability in this project, please report it to my responsibly. I take security seriously and appreciate your help in keeping my project safe.
+##  Versões Suportadas (Supported Versions)
 
-To report a vulnerability:
+Apenas a versão mais recente do código, presente na branch `main`, recebe suporte de segurança.
 
-1. **Do not open a public issue**. Please email me directly [edith.dev@tutamail.com] to disclose the issue.
-2. Provide a detailed description of the vulnerability, including:
-   - Steps to reproduce
-   - Potential impact
-   - Any evidence or screenshots (if applicable)
-3. I will acknowledge receipt of your report and follow up with details of the resolution or additional steps.
+| Versão  | Suportado          |
+| ------- | ------------------ |
+| `main`  | :white_check_mark: |
 
-Your contribution to the security of this project is highly appreciated.
 
-## Supported Versions
+## 🛡️ Como Reportar uma Vulnerabilidade
 
-This project currently supports the following versions:
+Para garantir a segurança e a privacidade de todos, peço que utilize o sistema de **relatório privado de vulnerabilidades do GitHub** para me notificar sobre qualquer falha de segurança.
 
-- Version 1.x.x
-- Version 2.x.x
+**Por favor, NÃO reporte vulnerabilidades de segurança através de issues públicas no GitHub.**
 
-Please ensure your security reports are based on one of the supported versions. If you are unsure, feel free to ask.
+Para reportar uma vulnerabilidade de forma privada:
 
-## Security Best Practices
+1.  Vá para a aba **"Security"** (Segurança) do repositório.
+2.  Clique no botão **"Report a vulnerability"** (Reportar uma vulnerabilidade).
+3.  Preencha o formulário com o máximo de detalhes possível, incluindo passos para reproduzir o problema.
 
-Here are some general security best practices that I follow:
+Eu me comprometo a analisar todos os relatórios o mais rápido possível e a manter uma comunicação transparente com você durante o processo de correção.
 
-- **HTTPS**: The website is served over HTTPS to ensure secure communication.
-- **Access Control**: We follow the principle of least privilege, ensuring that sensitive data and critical functions are only accessible to authorized users.
-
-## Additional Resources
-
-For more information on security best practices, check out the following resources:
-
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [Security Best Practices for Web Development](https://developer.mozilla.org/en-US/docs/Web/Security)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Obrigado por ajudar a manter este projeto seguro!

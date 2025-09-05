@@ -336,7 +336,7 @@ body {
     align-items: baseline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .section-title {
         font-size: 2rem;
     }
@@ -344,10 +344,7 @@ body {
         display: none; 
     }
     .hero-title {
-        font-size: 2.5rem;
-    }
-    .hero-subtitle {
-        margin-top: 150px;
+        font-size: 3rem;
     }
     .hero-subtitle {
         font-size: 1rem;
@@ -356,11 +353,36 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    .project-title {
+        font-size: 1.25rem;
+    }
+    .project-description {
+        font-size: 0.9rem;
+    }
+    .btn-secondary {
+        font-size: 0.8rem;
+    }
     .back-to-top {
         bottom: 20px;
         right: 20px;
         width: 45px;
         height: 45px;
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-title {
+        font-size: 2.2rem; 
+        line-height: 1; 
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; 
+        gap: 15px;
     }
 }

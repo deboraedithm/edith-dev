@@ -103,6 +103,30 @@ body {
     color: var(--primary-color);
 }
 
+.btn-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.linkedin-mobile-icon {
+    display: none;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -343,6 +367,24 @@ body {
     .header .btn-primary, .header .navbar {
         display: none; 
     }
+    .header {
+        justify-content: space-between;
+    }
+    .linkedin-mobile-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-secondary);
+        font-size: 1.8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .linkedin-mobile-icon:hover {
+        color: var(--primary-color);
+    }
+    .linkedin-desktop-icon {
+        display: none;
+    }
     .hero-title {
         font-size: 3rem;
     }
@@ -384,5 +426,8 @@ body {
     .hero-buttons {
         flex-direction: column; 
         gap: 15px;
+    }
+    .linkedin-desktop-icon {
+        display: none;
     }
 }

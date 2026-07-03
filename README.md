@@ -1,58 +1,68 @@
-# Edith.dev - Portfólio Pessoal
+# Edith.dev — Portfólio Pessoal
 
-Bem-vindo(a) ao repositório do meu portfólio pessoal! Este projeto foi criado do zero para apresentar minhas habilidades, projetos e minha jornada como desenvolvedora Full Stack.
+Bem-vindo(a) ao meu portfólio! Aqui você encontra minha trajetória, habilidades e projetos como Desenvolvedora Full Stack, com foco em performance, responsividade e uma experiência de usuário agradável.
 
-**➡️ [Acesse a versão ao vivo aqui!](https://deboraedithm.github.io/edith-dev/)**
+- Versão ao vivo: https://deboraedithm.github.io/edith-dev/
 
 ---
 
-## ✨ Sobre o Projeto
+## ✨ Destaques do Projeto
 
-O objetivo deste portfólio é ser um cartão de visitas digital, combinando um design minimalista e moderno com uma navegação fluida. A página foi desenvolvida com foco em performance, responsividade e uma experiência de usuário agradável, refletindo minha paixão por criar interfaces intuitivas e soluções robustas.
+- Tema claro/escuro com persistência
+  - Alternância de tema via botão no header
+  - Preferência salva no localStorage (chave: theme)
+  - Estilização via CSS Custom Properties e [data-theme] na raiz
 
-### Principais Funcionalidades
+- Efeito de digitação no herói (Typing Effect)
+  - Implementado com Typed.js
+  - Inicialização somente quando a seção entra em viewport (IntersectionObserver)
 
-* **Design Responsivo:** Totalmente adaptável para desktops, tablets e smartphones.
-* **Efeito de Digitação (Typing Effect):** Um título dinâmico na seção principal para capturar a atenção.
-* **Scroll Suave e Botão "Voltar ao Topo":** Navegação aprimorada para uma melhor experiência do usuário.
-* **Seções Claras:** Apresentação organizada de informações sobre mim, meus projetos e formas de contato.
+- Navegação e UX
+  - Cabeçalho fixo com blur e transparência
+  - Scroll suave
+  - Botão “Voltar ao topo” exibido após 300px de rolagem
+
+- Seções e Conteúdo
+  - Home com título dinâmico e chamada para LinkedIn/Projetos
+  - About com foto, bio e stack de tecnologias
+  - Projects com cards responsivos, tags e links de demo/repositório
+  - Contact com botão “Contact Me!” que copia o e-mail para a área de transferência e exibe feedback visual
+
+- Design e Performance
+  - Layout responsivo (mobile-first) com Flexbox e Grid
+  - Animação de gradiente no background
+  - Preconnect para Google Fonts
+  - Ícones via CDN (Phosphor Icons)
+
+- Acessibilidade
+  - Uso de alt em imagens e aria-label em ícones/interações
+  - Contraste e foco pensados para os dois temas
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-Este projeto foi construído utilizando as seguintes tecnologias:
+- HTML5 semântico
+- CSS3 (Flexbox, Grid, variáveis CSS, media queries, animações)
+- JavaScript ES6+ (DOM, IntersectionObserver, Clipboard API, localStorage)
+- Typed.js (efeito de digitação)
+- Phosphor Icons (ícones via CDN)
+- Google Fonts (Inter)
+- Lucide (CDN carregado; opcional)
 
-* **HTML5:** Para a estrutura semântica do conteúdo.
-* **CSS3:** Para a estilização, utilizando conceitos modernos como Flexbox e Grid Layout.
-* **JavaScript (ES6+):** Para a interatividade, incluindo o efeito de digitação e o controle de eventos.
-* **Typed.js:** Biblioteca externa para a animação do título.
-* **Phosphor Icons:** Para a utilização de ícones vetoriais.
+Observação: Todas as dependências externas são carregadas via CDN, sem etapa de build.
 
 ---
 
-## 🚀 Como Executar Localmente
+## 🔐 Segurança
 
-Caso queira explorar o código, siga os passos abaixo:
+Este repositório segue uma política de divulgação responsável. Consulte SECURITY.md para saber como reportar vulnerabilidades de forma privada.
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/deboraedithm/edith-dev.git](https://github.com/deboraedithm/edith-dev.git)
-    ```
-
-2.  **Navegue até a pasta do projeto:**
-    ```bash
-    cd edith-dev
-    ```
-
-3.  **Abra o arquivo `index.html`** no seu navegador de preferência.
-    * *Dica: Para uma melhor experiência de desenvolvimento, recomendo usar a extensão "Live Server" no VS Code.*
+Arquivo: SECURITY.md
 
 ---
 
 ## 📫 Contato
 
-Fique à vontade para se conectar comigo!
-
-* **LinkedIn:** https://www.linkedin.com/in/debora-edith/
-* **E-mail:** deboraedithm@gmail.com
+- LinkedIn: https://www.linkedin.com/in/debora-edith/
+- E-mail: deboraedithm@gmail.com

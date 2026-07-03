@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Débora Edith | FullStack Dev</title>
     
     <link rel="stylesheet" href="style.css">
-
-    <link rel="icon" type="image/png" href="midia/favicon.ico">
+    <link rel="icon" type="image/png" href="midia/favicon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,25 +17,32 @@
 <body>
 
     <header class="header">
-        <a class="logo"> < edith.dev > </a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#sobre">About</a>
-            <a href="#projetos">Projects</a>
-        </nav>
-        <a href="#contato" class="btn-primary">Contact</a>
-        <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="linkedin-mobile-icon" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="#home" class="logo"> &lt; edith.dev &gt; </a>
+        
+        <div class="header-actions">
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#sobre">About</a>
+                <a href="#projetos">Projects</a>
+            </nav>
+            <button id="themeToggle" class="btn-icon theme-btn" aria-label="Alternar tema">
+                <i class="ph ph-sun"></i>
+            </button>
+            <a href="#contato" class="btn-primary desktop-only">Contact</a>
+            <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="linkedin-mobile-icon mobile-only" aria-label="LinkedIn">
+                <i class="ph ph-linkedin-logo"></i>
+            </a>
+        </div>
     </header>
 
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
                 <h1 class="hero-title"></h1>
-                <p class="hero-subtitle">A curious mind with an independent spirit, passionate about coding and gaming. A FullStack Developer from Brazil, driven to craft innovative solutions and bring creative ideas to life.</p>
+                <p class="hero-subtitle">A curious mind with an independent spirit, passionate about coding and gaming. I'm a Full Stack Developer from Brazil driven to craft robust solutions and bring creative ideas to life.</p>
                 <div class="hero-buttons">
                     <a href="#projetos" class="btn-primary">See Projects</a>
-                    <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="btn-icon linkedin-desktop-icon" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-                    
+                    <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="btn-icon desktop-only" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                 </div>
             </div>
         </section>
@@ -44,25 +50,25 @@
         <section class="section" id="sobre">
             <h2 class="section-title">About me</h2>
             <div class="about-container">
-                <img src="midia/debora.jpg" alt="Foto de Débora Edith" class="about-photo">
+                <img src="midia/debora.png" alt="Foto de Débora Edith" class="about-photo">
                 <div class="about-text">
-                    <p>I'm a <strong style="color: var(--primary-color);">Full Stack Developer</strong> in training, blending a background in Psychology with a lifelong passion for <strong style="color: var(--primary-color);">gaming</strong> and <strong style="color: var(--primary-color);">technology</strong>. My journey, from analyzing the human mind to building user-centric applications, is driven by one mission: to craft digital experiences that are not just functional, but <strong style="color: var(--primary-color);">intuitive and human-centered</strong>.</p>
-                    <p>Currently leveling up my skills at <a href="https://www.fiap.com.br/institucional/" target="_blank" style="color: var(--primary-color);">FIAP</a> studying <strong style="color: var(--primary-color);">Systems Analysis and Development</strong>, I thrive on transforming complex challenges into seamless, innovative solutions. When I'm not coding, you'll find me exploring new virtual worlds or negotiating desk space with my cat, Anubis.</p>
+                    <p>I'm a <strong class="text-highlight">Full Stack Developer</strong> blending a background in Psychology with a lifelong passion for <strong class="text-highlight">gaming</strong> and <strong class="text-highlight">technology</strong>. My journey (from analyzing the human mind to building user-centric applications) is driven by one mission: to craft digital experiences that are not just functional, but <strong class="text-highlight">intuitive and human-centered</strong>.</p>
+
+                    <p>Currently, I'm applying my skills as a Software Developer Intern at <a href="https://ciandt.com/" target="_blank" class="text-highlight">CI&T</a>. I believe in continuous growth, which is why I'm studying <strong class="text-highlight">Systems Analysis and Development at FIAP</strong> and specializing with a postgraduate degree in <strong class="text-highlight">AI and Cybersecurity at PUCPR</strong>. Whether I'm building dynamic web applications or diving into backend systems with <strong class="text-highlight">Kotlin</strong>, I thrive on transforming complex challenges into seamless solutions. When I'm not coding, you'll find me exploring new virtual worlds or negotiating desk space with my cat, Anubis.</p>
+                    
                     <h3>Stack</h3>
                     <ul class="skills-list">
                         <li>JavaScript (ES6+)</li>
                         <li>TypeScript</li>
                         <li>React</li>
                         <li>Next.js</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>SQL & NoSQL</li>
+                        <li>Kotlin</li>
                         <li>Java</li>
-                        <li>Salesforce</li>
+                        <li>Python</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>SQL & NoSQL</li>
                         <li>Git & GitHub</li>
                         <li>UI/UX Design</li>
-                        <li>Figma</li>
                     </ul>
                 </div>
             </div>
@@ -72,7 +78,7 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="midia/project-1.png" alt="Imagem do Projeto 1" class="project-image">
+                    <img src="midia/project-1.gif" alt="Imagem do Projeto 1" class="project-image">
                     <div class="project-info">
                         <h3 class="project-title">Rock, Paper & Scissors Game</h3>
                         <p class="project-description">A Rock, Paper, Scissors web game built during "Imersão Dev 2025" event from Alura.</p>
@@ -87,8 +93,9 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="project-card">
-                    <img src="midia/project-2.png" alt="Imagem do Projeto 2" class="project-image">
+                    <img src="midia/project-2.gif" alt="Imagem do Projeto 2" class="project-image">
                     <div class="project-info">
                         <h3 class="project-title">Snake Game</h3>
                         <p class="project-description">A classic recreation of the Snake Game, developed in Python using the Pygame library for graphics and interactivity.</p>
@@ -102,23 +109,191 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <img src="midia/project-3.gif" alt="Imagem do Projeto Trip Planner" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Trip Planner App</h3>
+                        <p class="project-description">An application designed to help users plan, organize, and manage their travels effortlessly. Built with a focus on intuitive UI and seamless navigation.</p>
+                        <div class="project-tags">
+                            <span>Kotlin</span>
+                            <span>Mobile Dev</span>
+                            <span>Android</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/deboraedithm/TripPlanner" target="_blank" class="btn-secondary">Repository <i class="ph ph-github-logo"></i></a>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </section>
 
         <section class="section" id="contato">
             <h2 class="section-title">Let's Talk?</h2>
             <p class="contact-subtitle">I'm always open to new opportunities and partnerships. Feel free to get in touch!</p>
-
             <button id="copyEmailBtn" class="btn-primary contact-button">Contact Me!</button>
         </section>
     </main>
 
-  <a href="#home" id="backToTopBtn" class="back-to-top">
-    <i class="ph ph-arrow-up"></i>
-  </a>
+    <a href="#home" id="backToTopBtn" class="back-to-top">
+        <i class="ph ph-arrow-up"></i>
+    </a>
 
     <footer class="footer">
-        <p>© 2025 | Developed by Débora Edith</p>
+        <p>© 2026 | Developed by Débora Edith</p>
+        <div class="footer-links">
+            <a href="https://github.com/deboraedithm" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+            <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débora Edith | FullStack Dev</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="midia/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo"> &lt; edith.dev &gt; </a>
+        
+        <div class="header-actions">
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#sobre">About</a>
+                <a href="#projetos">Projects</a>
+            </nav>
+            <button id="themeToggle" class="btn-icon theme-btn" aria-label="Alternar tema">
+                <i class="ph ph-sun"></i>
+            </button>
+            <a href="#contato" class="btn-primary desktop-only">Contact</a>
+            <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="linkedin-mobile-icon mobile-only" aria-label="LinkedIn">
+                <i class="ph ph-linkedin-logo"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title"></h1>
+                <p class="hero-subtitle">A curious mind with an independent spirit, passionate about coding and gaming. I'm a Full Stack Developer from Brazil driven to craft robust solutions and bring creative ideas to life.</p>
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn-primary">See Projects</a>
+                    <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="btn-icon desktop-only" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="sobre">
+            <h2 class="section-title">About me</h2>
+            <div class="about-container">
+                <img src="midia/debora.png" alt="Foto de Débora Edith" class="about-photo">
+                <div class="about-text">
+                    <p>I'm a <strong class="text-highlight">Full Stack Developer</strong> blending a background in Psychology with a lifelong passion for <strong class="text-highlight">gaming</strong> and <strong class="text-highlight">technology</strong>. My journey (from analyzing the human mind to building user-centric applications) is driven by one mission: to craft digital experiences that are not just functional, but <strong class="text-highlight">intuitive and human-centered</strong>.</p>
+
+                    <p>Currently, I'm applying my skills as a Software Developer Intern at <a href="https://ciandt.com/" target="_blank" class="text-highlight">CI&T</a>. I believe in continuous growth, which is why I'm studying <strong class="text-highlight">Systems Analysis and Development at FIAP</strong> and specializing with a postgraduate degree in <strong class="text-highlight">AI and Cybersecurity at PUCPR</strong>. Whether I'm building dynamic web applications or diving into backend systems with <strong class="text-highlight">Kotlin</strong>, I thrive on transforming complex challenges into seamless solutions. When I'm not coding, you'll find me exploring new virtual worlds or negotiating desk space with my cat, Anubis.</p>
+                    
+                    <h3>Stack</h3>
+                    <ul class="skills-list">
+                        <li>JavaScript (ES6+)</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>SQL & NoSQL</li>
+                        <li>Git & GitHub</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projetos">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="midia/project-1.gif" alt="Imagem do Projeto 1" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Rock, Paper & Scissors Game</h3>
+                        <p class="project-description">A Rock, Paper, Scissors web game built during "Imersão Dev 2025" event from Alura.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>JS</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://deboraedithm.github.io/game-pedra-papel-tesoura/" target="_blank" class="btn-secondary">See Demo <i class="ph ph-arrow-up-right"></i></a>
+                            <a href="https://github.com/deboraedithm/game-pedra-papel-tesoura" target="_blank" class="btn-secondary">Repository <i class="ph ph-github-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="midia/project-2.gif" alt="Imagem do Projeto 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Snake Game</h3>
+                        <p class="project-description">A classic recreation of the Snake Game, developed in Python using the Pygame library for graphics and interactivity.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Pygame</span>
+                            <span>Game Dev</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/deboraedithm/snake_game.git" target="_blank" class="btn-secondary">Repository <i class="ph ph-github-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="midia/project-3.gif" alt="Imagem do Projeto Trip Planner" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Trip Planner App</h3>
+                        <p class="project-description">An application designed to help users plan, organize, and manage their travels effortlessly. Built with a focus on intuitive UI and seamless navigation.</p>
+                        <div class="project-tags">
+                            <span>Kotlin</span>
+                            <span>Mobile Dev</span>
+                            <span>Android</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/deboraedithm/TripPlanner" target="_blank" class="btn-secondary">Repository <i class="ph ph-github-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <h2 class="section-title">Let's Talk?</h2>
+            <p class="contact-subtitle">I'm always open to new opportunities and partnerships. Feel free to get in touch!</p>
+            <button id="copyEmailBtn" class="btn-primary contact-button">Contact Me!</button>
+        </section>
+    </main>
+
+    <a href="#home" id="backToTopBtn" class="back-to-top">
+        <i class="ph ph-arrow-up"></i>
+    </a>
+
+    <footer class="footer">
+        <p>© 2026 | Developed by Débora Edith</p>
         <div class="footer-links">
             <a href="https://github.com/deboraedithm" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
             <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>

@@ -15,6 +15,8 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="header-reveal-zone" aria-hidden="true"></div>
 
     <header class="header">
         <a href="#home" class="logo"> &lt; edith.dev &gt; </a>
@@ -38,13 +40,18 @@
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <h1 class="hero-title"></h1>
+                <p class="hero-kicker"><span class="status-dot"></span> PLAYER 01 <span class="kicker-divider">/</span> FULL-STACK DEVELOPER</p>
+                <h1 class="hero-title" aria-label="Developer by day. Player by nature.">Developer by day. Player by nature.</h1>
                 <p class="hero-subtitle">A curious mind with an independent spirit, passionate about coding and gaming. I'm a Full Stack Developer from Brazil driven to craft robust solutions and bring creative ideas to life.</p>
                 <div class="hero-buttons">
                     <a href="#projetos" class="btn-primary">See Projects</a>
                     <a href="https://www.linkedin.com/in/debora-edith/" target="_blank" class="btn-icon desktop-only" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                 </div>
             </div>
+            <a class="scroll-cue" href="#sobre" aria-label="Scroll to About me">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="ph ph-arrow-down"></i>
+            </a>
         </section>
 
         <section class="section" id="sobre">
@@ -78,9 +85,15 @@
         <section class="section" id="projetos">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="midia/project-1.gif" alt="Image from Project Rock, Paper, Scissors game" class="project-image">
-                    <div class="project-info">
+                <div class="project-card project-card--desktop">
+                    <div class="project-monitor">
+                        <img src="midia/project-1.gif" alt="Rock, Paper and Scissors game shown on a desktop monitor" class="project-image">
+                        <span class="monitor-stand" aria-hidden="true"></span>
+                    </div>
+                    <button class="project-details-toggle" type="button" aria-label="Show Rock, Paper and Scissors details" aria-expanded="false" aria-controls="project-details-rps">
+                        <i class="ph ph-hand-tap" aria-hidden="true"></i>
+                    </button>
+                    <div class="project-info" id="project-details-rps">
                         <h3 class="project-title">Rock, Paper & Scissors Game</h3>
                         <p class="project-description">A Rock, Paper, Scissors web game built during "Imersão Dev 2025" event from Alura.</p>
                         <div class="project-tags">
@@ -95,9 +108,15 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
-                    <img src="midia/project-2.gif" alt="Image from Project Snake Game" class="project-image">
-                    <div class="project-info">
+                <div class="project-card project-card--desktop">
+                    <div class="project-monitor">
+                        <img src="midia/project-2.gif" alt="Snake game shown on a desktop monitor" class="project-image">
+                        <span class="monitor-stand" aria-hidden="true"></span>
+                    </div>
+                    <button class="project-details-toggle" type="button" aria-label="Show Snake Game details" aria-expanded="false" aria-controls="project-details-snake">
+                        <i class="ph ph-hand-tap" aria-hidden="true"></i>
+                    </button>
+                    <div class="project-info" id="project-details-snake">
                         <h3 class="project-title">Snake Game</h3>
                         <p class="project-description">A classic recreation of the Snake Game, developed in Python using the Pygame library for graphics and interactivity.</p>
                         <div class="project-tags">
@@ -112,9 +131,14 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <img src="midia/project-3.gif" alt="Image from Project Trip Planner" class="project-image">
-                    <div class="project-info">
+                <div class="project-card project-card--phone">
+                    <div class="project-preview">
+                        <img src="midia/project-3.gif" alt="Trip Planner app displayed on a phone" class="project-image">
+                    </div>
+                    <button class="project-details-toggle" type="button" aria-label="Show Trip Planner details" aria-expanded="false" aria-controls="project-details-trip-planner">
+                        <i class="ph ph-hand-tap" aria-hidden="true"></i>
+                    </button>
+                    <div class="project-info" id="project-details-trip-planner">
                         <h3 class="project-title">Trip Planner App</h3>
                         <p class="project-description">An application designed to help users plan, organize, and manage their travels effortlessly. Built with a focus on intuitive UI and seamless navigation.</p>
                         <div class="project-tags">
@@ -128,9 +152,14 @@
                     </div>
                 </div>
 
-            <div class="project-card">
-                    <img src="midia/project-4.gif" alt="Image from Project Flick Finder" class="project-image">
-                    <div class="project-info">
+            <div class="project-card project-card--phone">
+                    <div class="project-preview">
+                        <img src="midia/project-4.gif" alt="Flick Finder app displayed on a phone" class="project-image">
+                    </div>
+                    <button class="project-details-toggle" type="button" aria-label="Show Flick Finder details" aria-expanded="false" aria-controls="project-details-flick-finder">
+                        <i class="ph ph-hand-tap" aria-hidden="true"></i>
+                    </button>
+                    <div class="project-info" id="project-details-flick-finder">
                         <h3 class="project-title">Flick Finder App</h3>
                         <p class="project-description">An application built with Kotlin and Clean Architecture that lets users browse popular movies, search titles, view details and trailers, and save favorites — powered by the TMDB API with offline persistence via Room.</p>
                         <div class="project-tags">
@@ -144,9 +173,14 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <img src="midia/project-5.gif" alt="Image from Project One Good Thing" class="project-image">
-                    <div class="project-info">
+                <div class="project-card project-card--phone">
+                    <div class="project-preview">
+                        <img src="midia/project-5.gif" alt="One Good Thing app displayed on a phone" class="project-image">
+                    </div>
+                    <button class="project-details-toggle" type="button" aria-label="Show One Good Thing details" aria-expanded="false" aria-controls="project-details-one-good-thing">
+                        <i class="ph ph-hand-tap" aria-hidden="true"></i>
+                    </button>
+                    <div class="project-info" id="project-details-one-good-thing">
                         <h3 class="project-title">One Good Thing App</h3>
                         <p class="project-description">A native iOS app built with SwiftUI that showcases NASA’s Astronomy Picture of the Day, explains each image, and lets users save favorites and comments locally..</p>
                         <div class="project-tags">
@@ -183,7 +217,6 @@
     </footer>
     
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

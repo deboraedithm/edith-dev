@@ -14,13 +14,16 @@ Bem-vindo(a) ao meu portfólio! Aqui você encontra minha trajetória, habilidad
   - Estilização via CSS Custom Properties e [data-theme] na raiz
 
 - Efeito de digitação no herói (Typing Effect)
-  - Implementado com Typed.js
+  - Implementado sem dependências externas
   - Inicialização somente quando a seção entra em viewport (IntersectionObserver)
+  - Título permanece disponível sem a biblioteca externa e respeita movimento reduzido
 
 - Navegação e UX
   - Cabeçalho fixo com blur e transparência
   - Scroll suave
   - Botão “Voltar ao topo” exibido após 300px de rolagem
+  - Indicador de progresso da página e destaque sutil que acompanha o cursor no herói
+  - Animações de entrada nas seções, desativadas para quem prefere movimento reduzido
 
 - Seções e Conteúdo
   - Home com título dinâmico e chamada para LinkedIn/Projetos
@@ -30,13 +33,16 @@ Bem-vindo(a) ao meu portfólio! Aqui você encontra minha trajetória, habilidad
 
 - Design e Performance
   - Layout responsivo (mobile-first) com Flexbox e Grid
-  - Animação de gradiente no background
+  - Visual minimalista com grade discreta e detalhes inspirados em HUDs de jogos
+  - Fundo ambiente com gradiente sutil e brilho que acompanha o cursor
+  - Projetos mobile em molduras de smartphone, com detalhes ao passar o mouse ou focar no desktop
   - Preconnect para Google Fonts
   - Ícones via CDN (Phosphor Icons)
 
 - Acessibilidade
   - Uso de alt em imagens e aria-label em ícones/interações
   - Contraste e foco pensados para os dois temas
+  - Suporte à preferência de movimento reduzido
 
 ---
 

@@ -74,6 +74,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    document.querySelectorAll('.timeline-node').forEach((node) => {
+        node.addEventListener('click', () => {
+            const entry = node.closest('.timeline-entry');
+            const list = node.closest('.timeline-list');
+            const card = document.getElementById(node.getAttribute('aria-controls'));
+            const isExpanded = node.getAttribute('aria-expanded') === 'true';
+
+            list.querySelectorAll('.timeline-node[aria-expanded="true"]').forEach((openNode) => {
+                if (openNode === node) return;
+
+                openNode.setAttribute('aria-expanded', 'false');
+                openNode.setAttribute('aria-label', openNode.getAttribute('aria-label').replace(/^Hide/, 'Show'));
+                openNode.closest('.timeline-entry').classList.remove('is-expanded');
+                document.getElementById(openNode.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
+            });
+
+            node.setAttribute('aria-expanded', String(!isExpanded));
+            node.setAttribute('aria-label', node.getAttribute('aria-label').replace(isExpanded ? /^Hide/ : /^Show/, isExpanded ? 'Show' : 'Hide'));
+            entry.classList.toggle('is-expanded', !isExpanded);
+            card.setAttribute('aria-hidden', String(isExpanded));
+        });
+    });
+
     themeToggle.addEventListener('click', () => {
         let theme = document.documentElement.getAttribute('data-theme');
         let newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -162,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', updateScrollProgress);
 
     if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-        const revealItems = document.querySelectorAll('.section-title, .about-container, .project-card, .contact-subtitle, .contact-button');
+        const revealItems = document.querySelectorAll('.section-title, .about-container, .timeline-entry, .project-card, .contact-subtitle, .contact-button');
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {

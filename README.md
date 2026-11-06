@@ -27,7 +27,8 @@ Bem-vindo(a) ao meu portfólio! Aqui você encontra minha trajetória, habilidad
 
 - Seções e Conteúdo
   - Home com título dinâmico e chamada para LinkedIn/Projetos
-  - About com foto, bio e stack de tecnologias
+  - About pessoal com foto e stack de tecnologias
+  - Experience com timelines de trabalho e formação acadêmica: horizontais no desktop e verticais no mobile, com detalhes expansíveis em cada marco
   - Projects com cards responsivos, tags e links de demo/repositório
   - Contact com botão “Contact Me!” que copia o e-mail para a área de transferência e exibe feedback visual
 
